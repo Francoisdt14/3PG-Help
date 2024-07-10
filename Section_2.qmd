@@ -16,7 +16,7 @@ Site factors required include: latitude (º), maximum available water stored in 
 
 Finally, parameters characterising the species modelled is also needed.
 
-``` R
+```         
 "Foliage:stem partitioning ratio @ D=2 cm"        
 "Foliage:stem partitioning ratio @ D=20 cm"        
 "Constant in the stem mass v. diam. relationship"        

@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -237,56 +203,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="species-parameters" class="level3">
 <h3 class="anchored" data-anchor-id="species-parameters">Species Parameters</h3>
 <p>Finally, parameters characterising the species modelled is also needed.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"Foliage:stem partitioning ratio @ D=2 cm"</span>        </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">"Foliage:stem partitioning ratio @ D=20 cm"</span>        </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">"Constant in the stem mass v. diam. relationship"</span>        </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">"Power in the stem mass v. diam. relationship"</span>        </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum fraction of NPP to roots"</span>        </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">"Minimum fraction of NPP to roots"</span>        </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">"Minimum temperature for growth"</span>        </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">"Optimum temperature for growth"</span>        </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum temperature for growth"</span>        </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">"Days production lost per frost day"</span>        </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">"Moisture ratio deficit for fq = 0.5"</span>           </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">"Power of moisture ratio deficit"</span>        </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">"Value of 'm' when FR = 0"</span>        </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">"Value of 'fNutr' when FR = 0"</span>        </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">"Power of (1-FR) in 'fNutr'"</span>        </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum stand age used in age modifier"</span>        </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">"Power of relative age in function for fAge"</span>        </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">"Relative age to give fAge = 0.5"</span>       </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum litterfall rate"</span>        </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="st">"Litterfall rate at t = 0"</span>        </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">"Age at which litterfall rate has median value"</span>        </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">"Average monthly root turnover rate"</span>       </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum canopy conductance"</span>       </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="st">"LAI for maximum canopy conductance"</span>        </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="st">"Defines stomatal response to VPD"</span>        </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="st">"Canopy boundary layer conductance"</span>        </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="st">"Max. stem mass per tree @ 1000 trees/hectare"</span>        </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="st">"Power in self-thinning rule"</span>        </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="st">"Fraction mean single-tree foliage biomass lost per dead tree"</span>        </span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="st">"Fraction mean single-tree root biomass lost per dead tree"</span>        </span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="st">"Fraction mean single-tree stem biomass lost per dead tree"</span>        </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="st">"Specific leaf area at age 0"</span>        </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="st">"Specific leaf area for mature leaves"</span>        </span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="st">"Age at which specific leaf area = (SLA0+SLA1)/2"</span>        </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="st">"Extinction coefficient for absorption of PAR by canopy"</span>        </span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">"Age at canopy cover"</span>       </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum proportion of rainfall evaporated from canopy"</span>        </span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st">"LAI for maximum rainfall interception"</span>        </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st">"Canopy quantum efficiency"</span>        </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">"Ratio NPP/GPP"</span>       </span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="st">"Branch and bark fraction at age 0"</span>        </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="st">"Branch and bark fraction for mature stands"</span>        </span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="st">"Age at which fracBB = (fracBB0+fracBB1)/2"</span>        </span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="st">"Minimum basic density - for young trees"</span>        </span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="st">"Maximum basic density - for older trees"</span>        </span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="st">"Age at which rho = (rhoMin+rhoMax)/2"</span>        </span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="st">"Intercept of net v. solar radiation relationship"</span>        </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="st">"Slope of net v. solar radiation relationship"</span>        </span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="st">"Molecular weight of dry matter"</span>        </span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="st">"Conversion of solar radiation to PAR"</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>"Foliage:stem partitioning ratio @ D=2 cm"        
+"Foliage:stem partitioning ratio @ D=20 cm"        
+"Constant in the stem mass v. diam. relationship"        
+"Power in the stem mass v. diam. relationship"        
+"Maximum fraction of NPP to roots"        
+"Minimum fraction of NPP to roots"        
+"Minimum temperature for growth"        
+"Optimum temperature for growth"        
+"Maximum temperature for growth"        
+"Days production lost per frost day"        
+"Moisture ratio deficit for fq = 0.5"           
+"Power of moisture ratio deficit"        
+"Value of 'm' when FR = 0"        
+"Value of 'fNutr' when FR = 0"        
+"Power of (1-FR) in 'fNutr'"        
+"Maximum stand age used in age modifier"        
+"Power of relative age in function for fAge"        
+"Relative age to give fAge = 0.5"       
+"Maximum litterfall rate"        
+"Litterfall rate at t = 0"        
+"Age at which litterfall rate has median value"        
+"Average monthly root turnover rate"       
+"Maximum canopy conductance"       
+"LAI for maximum canopy conductance"        
+"Defines stomatal response to VPD"        
+"Canopy boundary layer conductance"        
+"Max. stem mass per tree @ 1000 trees/hectare"        
+"Power in self-thinning rule"        
+"Fraction mean single-tree foliage biomass lost per dead tree"        
+"Fraction mean single-tree root biomass lost per dead tree"        
+"Fraction mean single-tree stem biomass lost per dead tree"        
+"Specific leaf area at age 0"        
+"Specific leaf area for mature leaves"        
+"Age at which specific leaf area = (SLA0+SLA1)/2"        
+"Extinction coefficient for absorption of PAR by canopy"        
+"Age at canopy cover"       
+"Maximum proportion of rainfall evaporated from canopy"        
+"LAI for maximum rainfall interception"        
+"Canopy quantum efficiency"        
+"Ratio NPP/GPP"       
+"Branch and bark fraction at age 0"        
+"Branch and bark fraction for mature stands"        
+"Age at which fracBB = (fracBB0+fracBB1)/2"        
+"Minimum basic density - for young trees"        
+"Maximum basic density - for older trees"        
+"Age at which rho = (rhoMin+rhoMax)/2"        
+"Intercept of net v. solar radiation relationship"        
+"Slope of net v. solar radiation relationship"        
+"Molecular weight of dry matter"        
+"Conversion of solar radiation to PAR" </code></pre>
 
 
 </section>
