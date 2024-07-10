@@ -18,9 +18,7 @@ Here is the landing page for the 3-PG User Guide. This website includes the foll
 ### 1. Background
 
 -   What is 3-PG?
-
 -   How does 3-PG Work?
-
 -   What can we do with it?
 
 ### 2. Input Datasets
