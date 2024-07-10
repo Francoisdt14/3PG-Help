@@ -14,7 +14,7 @@
     "href": "Section_5.html",
     "title": "Other Implementations",
     "section": "",
-    "text": "Excel\nOriginally, 3-PG was written…\n\n\nr3PG\nThe r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub here, with a accomanying documentation here. The package is described in detail here: https://doi.org/10.1111/2041-210X.13474",
+    "text": "Excel\nOriginally, 3-PG was written…\n\n\nr3PG\nThe r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub here, with a accompanying documentation here. The package is described in detail here: https://doi.org/10.1111/2041-210X.13474",
     "crumbs": [
       "Other Implementations"
     ]

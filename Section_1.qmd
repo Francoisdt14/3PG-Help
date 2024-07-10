@@ -9,11 +9,8 @@ title: "3-PG Background"
 **Key features of 3-PG include:**
 
 -   Simplicity: 3-PG uses a small number of parameters that are readily available or easily estimated.
-
 -   Monthly time-step: Allows for detailed analysis of seasonal variations in growth.
-
 -   Generality: Can be applied to a wide range of forest types and management regimes.
-
 -   Physiological basis: Incorporates key physiological processes governing tree growth.
 
 ## How does 3-PG Work?
@@ -21,11 +18,8 @@ title: "3-PG Background"
 3-PG consists of five submodules: biomass production, biomass allocation, stem mortality, soil water balance, and stand management. Together, these submodules dictate how much stand can grow over a given period of time.
 
 -   Photosynthetically active radiation (APAR) absorbed by the canopy is determined from total solar radiation, and canopy LAI. Environmental modifiers, based on atmospheric vapour pressure deficit, available soil water, mean air temperature, frost days per month, site nutrition, and stand age are then taken into account, limiting the total gross primary production that can occur. Net primary production (NPP) is a constant fraction of GPP (47%).
-
 -   Allocation of NPP (biomass) to stems and foliage varies by growing conditions, and depends on average tree size; allocation to foliage declines and that to stems increases as stands age. Allocation of NPP to roots depends on growing conditions (expressed by available soil water, vapour pressure deficit, and site nutrition). The proportion of NPP allocated to roots increases when nutritional status and/or available soil water are low.
-
 -   An upper limit of stem number is calculated based on the single-tree stem mass of a current stem population. If the current stem mass is greater than the upper limit, the stem population is reduced to a level consistent with this limit.
-
 -   Finally, stand characteristics that are of interest to scientists and forests managers such as biomass, stem volume, basal area, and mean stem diameter can be calculated for the entire duration of stand growth.
 
 ## What can we do with it?
@@ -33,31 +27,17 @@ title: "3-PG Background"
 3-PG has a wide range of applications in forestry and environmental science. 3-PG can be used to:
 
 -   Estimate carbon sequestration in forests
-
     -   Quantify carbon storage in different forest components (stems, roots, foliage)
-
     -   Project long-term carbon sequestration potential
-
 -   Predict forest growth and productivity
-
     -   Estimate timber yield under different management scenarios
-
     -   Forecast biomass accumulation over time
-
 -   Assess the impact of climate change on forest ecosystems
-
     -   Model forest response to changing temperature and precipitation patterns
-
     -   Evaluate potential shifts in species distribution
-
 -   Optimize forest management practices
-
     -   Determine optimal thinning regimes
-
     -   Assess the effects of different fertilization strategies
-
 -   Support decision-making in forestry
-
     -   Inform policy decisions related to sustainable forest management
-
     -   Guide investment decisions in forestry projects
