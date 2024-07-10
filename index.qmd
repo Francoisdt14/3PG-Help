@@ -1,11 +1,40 @@
 ---
-title: "3PG-Help"
+title: "3-PG User Guide"
+image: media/3PG_Logo.png
+toc: false
+about: 
+  template: solana
+  image-shape: rectangle
+  image-width: 20em
+  #links:
+   # - text: 3-PG Forest Growth Model
+    #  href: https://3pg.forestry.ubc.ca/
 ---
 
-This is a Quarto website.
+# Welcome!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Here is the landing page for the 3-PG User Guide.
 
-```{r}
-1 + 1
-```
+This website includes the following sections:
+
+### Background
+
+-   What is 3-PG?
+
+-   How does 3-PG Work?
+
+-   What can we do with it?
+
+### Input Datasets
+
+-   What do we need for 3-PG to work
+
+### The C++ Executable
+
+-   A step-by-step guide
+
+### Case Studies
+
+### Other Implementations of 3-PG
+
+### Additional Resources

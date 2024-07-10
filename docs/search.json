@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "3PG-Help",
+    "title": "3-PG User Guide",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome!\nHere is the landing page for the 3-PG User Guide.\nThis website includes the following sections:\n\nBackground\n\nWhat is 3-PG?\nHow does 3-PG Work?\nWhat can we do with it?\n\n\n\nInput Datasets\n\nWhat do we need for 3-PG to work\n\n\n\nThe C++ Executable\n\nA step-by-step guide\n\n\n\nCase Studies\n\n\nOther Implementations of 3-PG\n\n\nAdditional Resources"
   },
   {
     "objectID": "about.html",
