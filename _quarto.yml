@@ -4,8 +4,10 @@ project:
 
 website:
   title: "3-PG User Guide"
-  navbar:
-    left:
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
       - href: index.qmd
         text: Home
       - Section_1.qmd
