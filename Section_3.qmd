@@ -4,6 +4,20 @@ title: "The C++ Executable"
 
 Step-by-step user guide for forest simulation with the C++ executable
 
-System requirements?
+### System requirements?
 
-Installation process?
+### Installation process?
+
+### Usage
+
+3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The usage of the program is:
+
+{{< 3pg -d default_file -s site_file >}}
+
+3-PG reads input parameters from two text files. The parameters are named to match the long, descriptive, parameter names, used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version.
+
+### Parameter Files
+
+**Site Parameter File**
+
+**Species Parameter File**

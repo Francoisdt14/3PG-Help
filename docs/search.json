@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "Section_7.html",
+    "href": "Section_7.html",
+    "title": "Additional Resources",
+    "section": "",
+    "text": "The 3-PG website hosted by the UBC Faculty of Forestry contains several helpful documents related to model development, descriptions, studies and additional background information: UBC 3-PG Website"
+  },
+  {
+    "objectID": "Section_5.html",
+    "href": "Section_5.html",
+    "title": "Other Implementations",
+    "section": "",
+    "text": "Excel\nOriginally, 3-PG was written…\n\n\nr3PG\nThe r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub here, with a accomanying documentation here. The package is described in detail here: https://doi.org/10.1111/2041-210X.13474"
+  },
+  {
     "objectID": "Section_3.html",
     "href": "Section_3.html",
     "title": "The C++ Executable",
     "section": "",
-    "text": "Step-by-step user guide for forest simulation with the C++ executable\nSystem requirements?\nInstallation process?"
+    "text": "Step-by-step user guide for forest simulation with the C++ executable\n\nSystem requirements?\n\n\nInstallation process?\n\n\nUsage\n3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The usage of the program is:\n{{&lt; 3pg -d default_file -s site_file &gt;}}\n3-PG reads input parameters from two text files. The parameters are named to match the long, descriptive, parameter names, used in the Excel version. While the two parameter files are referred to as the ‘default’ and the ‘site’ parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version.\n\n\nParameter Files\nSite Parameter File\nSpecies Parameter File"
   },
   {
     "objectID": "Section_1.html",
@@ -32,7 +46,7 @@
     "href": "Section_1.html#what-can-we-do-with-it",
     "title": "3-PG Background",
     "section": "What can we do with it?",
-    "text": "What can we do with it?\n3-PG has a wide range of applications in forestry and environmental science. 3-PG can be used to:"
+    "text": "What can we do with it?\n3-PG has a wide range of applications in forestry and environmental science. 3-PG can be used to:\n\nEstimate carbon sequestration in forests\n\nQuantify carbon storage in different forest components (stems, roots, foliage)\nProject long-term carbon sequestration potential\n\nPredict forest growth and productivity\n\nEstimate timber yield under different management scenarios\nForecast biomass accumulation over time\n\nAssess the impact of climate change on forest ecosystems\n\nModel forest response to changing temperature and precipitation patterns\nEvaluate potential shifts in species distribution\n\nOptimize forest management practices\n\nDetermine optimal thinning regimes\nAssess the effects of different fertilization strategies\n\nSupport decision-making in forestry\n\nInform policy decisions related to sustainable forest management\nGuide investment decisions in forestry projects"
   },
   {
     "objectID": "about.html",
@@ -46,13 +60,20 @@
     "href": "index.html",
     "title": "3-PG User Guide",
     "section": "",
-    "text": "Welcome!\nHere is the landing page for the 3-PG User Guide.\nThis website includes the following sections:\n\nBackground\n\nWhat is 3-PG?\nHow does 3-PG Work?\nWhat can we do with it?\n\n\n\nInput Datasets\n\nWhat do we need for 3-PG to work\n\n\n\nThe C++ Executable\n\nA step-by-step guide\n\n\n\nCase Studies\n\n\nOther Implementations of 3-PG\n\n\nAdditional Resources"
+    "text": "Welcome!\nHere is the landing page for the 3-PG User Guide. This website includes the following sections:\n\n1. Background\n\nWhat is 3-PG?\nHow does 3-PG Work?\nWhat can we do with it?\n\n\n\n2. Input Datasets\n\nWhat do we need for 3-PG to work\n\n\n\n3. The C++ Executable\n\nA step-by-step guide\n\n\n\n4. Case Studies?\n\n\n5. Other Implementations of 3-PG?\n\n\n6. Species Parameterization\n\n\n7. Additional Resources"
   },
   {
     "objectID": "Section_2.html",
     "href": "Section_2.html",
     "title": "Input Datasets",
     "section": "",
-    "text": "3-PG requires climatic data, data describing the physical properties of the site, and a species specific parameter file.\n\nClimate Data\n\n\nSite Characteristics\n\n\nSpecies Parameters\nAbout this site\n\n1 + 1\n\n[1] 2"
+    "text": "3-PG requires climatic data, data describing the physical properties of the site, and a species specific parameter file.\n\nClimate Data\nThe following climate data is required for 3-PG to run: monthly maximum and minimum temperature (ºC), monthly mean daily solar radiation (MJ m-2 d-1), precipitation (mm month-1), and frost days.\n\n\nSite Characteristics\nSite factors required include: latitude (º), maximum available water stored in the soil (mm), and oil fertility rating. In addition, initial conditions such as stem, root, and foliage biomass, stocking, and soil water at some time are needed.\n\n\nSpecies Parameters\nFinally, parameters characterising the species modelled is also needed.\n\"Foliage:stem partitioning ratio @ D=2 cm\"        \n\"Foliage:stem partitioning ratio @ D=20 cm\"        \n\"Constant in the stem mass v. diam. relationship\"        \n\"Power in the stem mass v. diam. relationship\"        \n\"Maximum fraction of NPP to roots\"        \n\"Minimum fraction of NPP to roots\"        \n\"Minimum temperature for growth\"        \n\"Optimum temperature for growth\"        \n\"Maximum temperature for growth\"        \n\"Days production lost per frost day\"        \n\"Moisture ratio deficit for fq = 0.5\"           \n\"Power of moisture ratio deficit\"        \n\"Value of 'm' when FR = 0\"        \n\"Value of 'fNutr' when FR = 0\"        \n\"Power of (1-FR) in 'fNutr'\"        \n\"Maximum stand age used in age modifier\"        \n\"Power of relative age in function for fAge\"        \n\"Relative age to give fAge = 0.5\"       \n\"Maximum litterfall rate\"        \n\"Litterfall rate at t = 0\"        \n\"Age at which litterfall rate has median value\"        \n\"Average monthly root turnover rate\"       \n\"Maximum canopy conductance\"       \n\"LAI for maximum canopy conductance\"        \n\"Defines stomatal response to VPD\"        \n\"Canopy boundary layer conductance\"        \n\"Max. stem mass per tree @ 1000 trees/hectare\"        \n\"Power in self-thinning rule\"        \n\"Fraction mean single-tree foliage biomass lost per dead tree\"        \n\"Fraction mean single-tree root biomass lost per dead tree\"        \n\"Fraction mean single-tree stem biomass lost per dead tree\"        \n\"Specific leaf area at age 0\"        \n\"Specific leaf area for mature leaves\"        \n\"Age at which specific leaf area = (SLA0+SLA1)/2\"        \n\"Extinction coefficient for absorption of PAR by canopy\"        \n\"Age at canopy cover\"       \n\"Maximum proportion of rainfall evaporated from canopy\"        \n\"LAI for maximum rainfall interception\"        \n\"Canopy quantum efficiency\"        \n\"Ratio NPP/GPP\"       \n\"Branch and bark fraction at age 0\"        \n\"Branch and bark fraction for mature stands\"        \n\"Age at which fracBB = (fracBB0+fracBB1)/2\"        \n\"Minimum basic density - for young trees\"        \n\"Maximum basic density - for older trees\"        \n\"Age at which rho = (rhoMin+rhoMax)/2\"        \n\"Intercept of net v. solar radiation relationship\"        \n\"Slope of net v. solar radiation relationship\"        \n\"Molecular weight of dry matter\"        \n\"Conversion of solar radiation to PAR\""
+  },
+  {
+    "objectID": "Section_6.html",
+    "href": "Section_6.html",
+    "title": "Species Parameterization",
+    "section": "",
+    "text": "Link to papers that parameterize species?\nOften helpful to use Excel implementation…"
   }
 ]

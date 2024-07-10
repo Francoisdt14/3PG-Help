@@ -1,0 +1,11 @@
+---
+title: "Other Implementations"
+---
+
+### Excel
+
+Originally, 3-PG was written...
+
+### r3PG
+
+The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accomanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail here: <https://doi.org/10.1111/2041-210X.13474>

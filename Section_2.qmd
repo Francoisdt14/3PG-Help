@@ -6,12 +6,65 @@ title: "Input Datasets"
 
 ### Climate Data
 
+The following climate data is required for 3-PG to run: monthly maximum and minimum temperature (ºC), monthly mean daily solar radiation (MJ m^-2^ d^-1^), precipitation (mm month^-1^), and frost days.
+
 ### Site Characteristics
+
+Site factors required include: latitude (º), maximum available water stored in the soil (mm), and oil fertility rating. In addition, initial conditions such as stem, root, and foliage biomass, stocking, and soil water at some time are needed.
 
 ### Species Parameters
 
-About this site
+Finally, parameters characterising the species modelled is also needed.
 
-```{r}
-1 + 1
+``` R
+"Foliage:stem partitioning ratio @ D=2 cm"        
+"Foliage:stem partitioning ratio @ D=20 cm"        
+"Constant in the stem mass v. diam. relationship"        
+"Power in the stem mass v. diam. relationship"        
+"Maximum fraction of NPP to roots"        
+"Minimum fraction of NPP to roots"        
+"Minimum temperature for growth"        
+"Optimum temperature for growth"        
+"Maximum temperature for growth"        
+"Days production lost per frost day"        
+"Moisture ratio deficit for fq = 0.5"        	
+"Power of moisture ratio deficit"        
+"Value of 'm' when FR = 0"        
+"Value of 'fNutr' when FR = 0"        
+"Power of (1-FR) in 'fNutr'"        
+"Maximum stand age used in age modifier"        
+"Power of relative age in function for fAge"        
+"Relative age to give fAge = 0.5"       
+"Maximum litterfall rate"        
+"Litterfall rate at t = 0"        
+"Age at which litterfall rate has median value"        
+"Average monthly root turnover rate"       
+"Maximum canopy conductance"       
+"LAI for maximum canopy conductance"        
+"Defines stomatal response to VPD"        
+"Canopy boundary layer conductance"        
+"Max. stem mass per tree @ 1000 trees/hectare"        
+"Power in self-thinning rule"        
+"Fraction mean single-tree foliage biomass lost per dead tree"        
+"Fraction mean single-tree root biomass lost per dead tree"        
+"Fraction mean single-tree stem biomass lost per dead tree"        
+"Specific leaf area at age 0"        
+"Specific leaf area for mature leaves"        
+"Age at which specific leaf area = (SLA0+SLA1)/2"        
+"Extinction coefficient for absorption of PAR by canopy"        
+"Age at canopy cover"       
+"Maximum proportion of rainfall evaporated from canopy"        
+"LAI for maximum rainfall interception"        
+"Canopy quantum efficiency"        
+"Ratio NPP/GPP"       
+"Branch and bark fraction at age 0"        
+"Branch and bark fraction for mature stands"        
+"Age at which fracBB = (fracBB0+fracBB1)/2"        
+"Minimum basic density - for young trees"        
+"Maximum basic density - for older trees"        
+"Age at which rho = (rhoMin+rhoMax)/2"        
+"Intercept of net v. solar radiation relationship"        
+"Slope of net v. solar radiation relationship"        
+"Molecular weight of dry matter"        
+"Conversion of solar radiation to PAR" 
 ```

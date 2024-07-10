@@ -1,0 +1,7 @@
+---
+title: "Species Parameterization"
+---
+
+Link to papers that parameterize species?
+
+Often helpful to use Excel implementation...
