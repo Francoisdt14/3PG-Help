@@ -11,28 +11,32 @@ about:
     #  href: https://3pg.forestry.ubc.ca/
 ---
 
-# Welcome!
+## Welcome!
 
 Here is the landing page for the 3-PG User Guide. This website includes the following sections:
 
-### 1. Background
+#### 1. Background
 
 -   What is 3-PG?
 -   How does 3-PG Work?
 -   What can we do with it?
 
-### 2. Input Datasets
+#### 2. Input Datasets
 
 -   What do we need for 3-PG to work
 
-### 3. The C++ Executable
+#### 3. The C++ Executable
 
--   A step-by-step guide
+-   A step-by-step guide to using the 3-PG executable
 
-### 4. Case Studies?
+#### 4. Case Study
 
-### 5. Other Implementations of 3-PG?
+-   Example outputs using some small sample data?
 
-### 6. Species Parameterization
+#### 5. Other Implementations of 3-PG
 
-### 7. Additional Resources
+#### 6. Species Parameterization
+
+#### 7. Additional Resources
+
+#### 

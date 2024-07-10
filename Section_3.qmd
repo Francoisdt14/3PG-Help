@@ -10,7 +10,9 @@ Step-by-step user guide for forest simulation with the C++ executable
 
 ### Usage
 
-3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The usage of the program is:
+3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in \[Section 5\](Section_5.qmd)).
+
+The usage of the program is:
 
 ```         
 3pg -d default_file -s site_file
@@ -21,5 +23,9 @@ Step-by-step user guide for forest simulation with the C++ executable
 ### Parameter Files
 
 **Site Parameter File**
+
+::: callout-note
+This is a callout box.
+:::
 
 **Species Parameter File**
