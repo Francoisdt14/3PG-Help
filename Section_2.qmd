@@ -4,17 +4,19 @@ title: "Input Datasets"
 
 3-PG requires climatic data, data describing the physical properties of the site, and a species specific parameter file.
 
-### Climate Data
-
-The following climate data is required for 3-PG to run: monthly maximum and minimum temperature (ºC), monthly mean daily solar radiation (MJ m^-2^ d^-1^), precipitation (mm month^-1^), and frost days.
-
 ### Site Characteristics
 
 Site factors required include: latitude (º), maximum available water stored in the soil (mm), and oil fertility rating. In addition, initial conditions such as stem, root, and foliage biomass, stocking, and soil water at some time are needed.
 
+### Climate Data
+
+The following climate data is required for 3-PG to run: monthly maximum and minimum temperature (ºC), monthly mean daily solar radiation (MJ m^-2^ d^-1^), precipitation (mm month^-1^), and frost days.
+
+Climate data can be found from a variety of sources.. **example**
+
 ### Species Parameters
 
-Finally, parameters characterising the species modelled is also needed.
+Parameters characterising the species of interest is required for 3-PG. Species parameterizations for often exist for common commercial species such as **examples**
 
 ```         
 "Foliage:stem partitioning ratio @ D=2 cm"        

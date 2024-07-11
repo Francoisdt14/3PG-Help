@@ -10,7 +10,7 @@ Step-by-step user guide for forest simulation with the C++ executable
 
 ### Usage
 
-3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in \[Section 5\](Section_5.qmd)).
+3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in [Section 5](./Section_5.qmd)).
 
 The usage of the program is:
 
@@ -18,14 +18,73 @@ The usage of the program is:
 3pg -d default_file -s site_file
 ```
 
-3-PG reads input parameters from two text files. The parameters are named to match the long, descriptive, parameter names, used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version.
+3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 4](./Section_4.qmd).
 
 ### Parameter Files
 
-**Site Parameter File**
+The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space seperating the parameter name and its value.
 
 ::: callout-note
-This is a callout box.
+Comments are allowed in the parameter file. Comments can appear almost anywhere, must begin with two forward slash characters '//', and end at the end of the line.
 :::
+
+**Site Parameter File**
+
+The site parameter file includes two types of parameters. Site characteristics, and climate parameters, which are referred to as 'series' parameters. The site parameter file typically contains the following parameters:
+
+```         
+// Site and Stand Descriptors
+Latitude (Latitude)
+Soil fertility (Fertility rating)
+Soil texture (Soil class)
+Maximum available soil water (Maximum ASW)
+Minimum available soil water (Minimum ASW)
+Start age of the trees (Start age)
+End year of the simulation (End year)
+Start month of the simulation (Start month)
+Year the stand was planted (Year Planted)
+Initial foliage biomass (WFi)
+Initial root biomass (WRi)
+Initial stem biomass (WSi)
+Initial stem number (StemNoi)
+Initial available soil water (ASWi)
+
+// Climate Parameters
+Monthly means of maximum daily temperature (Tmax)
+Monthly means of minimum daily temperature (Tmax)
+Monthly mean rainfall (Rain)
+Monthly mean short-wave radiation (Solar radtn)
+Frost days per month (Frost)
+```
+
+Parameters that describe site conditions can be prodided as constants, or rasters.
+
+For example:
+
+```         
+"Fertility rating",  0.7 "Fertility rating",  D:\...\fert.tif
+```
+
+In the first case, fertility would be set to a constant value of 25. In the second case, a raster is used to set the fertility value across an area of interest.
+
+Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by whitespace, followed by 12 values. For example, this line:
+
+```         
+"frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0
+```
+
+sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.
+
+The second format for series parameters allows for climate values to be associated with particular years, and for more than one year of input. In this format the keyword must be on a line by itself, followed lines containing a year, followed by 12 values. The series must be terminated by a blank line. For example:
+
+```         
+"Rain" 
+1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
+1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0
+```
+
+This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
+
+**Management Tables**
 
 **Species Parameter File**
