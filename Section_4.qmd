@@ -50,7 +50,7 @@ short name     long name
 "LAI"          "Leaf Area Index"
 ```
 
-**Check this**
+**Check this how much of this has changed? Do we still have satellite capability**
 
 The full list of output variables available in 3PGS and spatial modes is:
 

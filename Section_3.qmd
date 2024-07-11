@@ -22,7 +22,7 @@ The usage of the program is:
 3PG -d default_file -s site_file
 ```
 
-3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 4](./Section_4.qmd).
+3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 7](./Section_7.qmd).
 
 ### Parameter Files
 
@@ -75,9 +75,9 @@ or
 "Fertility rating",  fert.tif
 ```
 
-In the first case, fertility would be set to a constant value of 25. In the second case, a raster is used to set the fertility value across an area of interest.
+In the first case, fertility would be set to a constant value of 0.7. In the second case, a raster is used to set the fertility value across an area of interest.
 
-Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by whitespace, followed by 12 values. For example, this line:
+Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by white space, followed by 12 values. For example, this line:
 
 ```         
 "frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0

@@ -4,7 +4,7 @@ title: "Additional Resources and Examples"
 
 ### Helpful Resources
 
-The 3-PG website hosted by the UBC Faculty of Forestry contains several helpful documents related to model development, descriptions, studies and additional background information: [UBC 3-PG Website](https://3pg.forestry.ubc.ca/)
+The 3-PG website hosted by the UBC Faculty of Forestry contains several helpful documents related to model development, descriptions, studies and additional background information: [UBC 3-PG Website](https://3pg.forestry.ubc.ca/).
 
 ### Example Parameter Files
 
