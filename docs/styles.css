@@ -1,1 +1,5 @@
 /* css styles */
+.sidebar-logo img {
+  max-height: 50px;
+  width: auto;
+}

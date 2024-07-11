@@ -7,6 +7,8 @@ website:
   sidebar:
     style: "docked"
     search: true
+    logo: /media/3PG_Logo.png
+    logo-alt: "Website logo image"
     contents:
       - href: index.qmd
         text: Home
@@ -21,7 +23,7 @@ website:
   page-footer:
     left: <img src="media/IRSS_logo_colour.png" alt="Logo" style="height:50px;">
     right: <img src="media/BP_logo.png" alt="Logo" style="height:50px;">
-    center: <img src="media/3PG_Logo.png" alt="Logo" style="height:50px;">
+    #center: <img src="media/3PG_Logo.png" alt="Logo" style="height:50px;">
 
 format:
   html:
