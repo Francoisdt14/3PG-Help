@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link active" data-scroll-target="#system-requirements">System requirements?</a></li>
-  <li><a href="#installation-process" id="toc-installation-process" class="nav-link" data-scroll-target="#installation-process">Installation process?</a></li>
+  <li><a href="#installation-process" id="toc-installation-process" class="nav-link" data-scroll-target="#installation-process">Installation process</a></li>
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
   <li><a href="#parameter-files" id="toc-parameter-files" class="nav-link" data-scroll-target="#parameter-files">Parameter Files</a></li>
   </ul>
@@ -192,18 +192,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Step-by-step user guide for forest simulation with the C++ executable</p>
+<p>Step-by-step user guide for forest simulation with the C++ executable.</p>
 <section id="system-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="system-requirements">System requirements?</h3>
+<p>The 3-PG executable can be run on Windows (Mac? Linux?).</p>
 </section>
 <section id="installation-process" class="level3">
-<h3 class="anchored" data-anchor-id="installation-process">Installation process?</h3>
+<h3 class="anchored" data-anchor-id="installation-process">Installation process</h3>
+<p>To use the executable, copy and paste it to your desired location. After that, all you need is the file path.</p>
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">Usage</h3>
 <p>3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in <a href="./Section_5.html">Section 5</a>).</p>
 <p>The usage of the program is:</p>
-<pre><code>3pg -d default_file -s site_file</code></pre>
+<pre><code>3PG -d default_file -s site_file</code></pre>
 <p>3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the ‘default’ and the ‘site’ parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of <a href="./Section_4.html">Section 4</a>.</p>
 </section>
 <section id="parameter-files" class="level3">
@@ -270,7 +272,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The parameter “Model mode” is required and should appear at the top of the site paramter file. The parameter “output directory” is also required and gives the path to a directory in which output rasters will be written. For example:</p>
+<p>The parameters “Model mode” and “Output directory” are required, and should appear at the top of the site parameter file. “Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
 <pre><code>"Model mode" 3PG
 "Output directory" D:\3-PGS_MODEL</code></pre>
 </div>

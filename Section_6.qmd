@@ -5,3 +5,7 @@ title: "Species Parameterization"
 Link to papers that parameterize species?
 
 Often helpful to use Excel implementation...
+
+[Parameterisation of 3-PG for plantation grown Eucalyptus globulus](https://www.sciencedirect.com/science/article/pii/S0378112701005862)[^1]
+
+[^1]: Sands, P. J., & Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus. *Forest Ecology and Management*, *163*(1-3), 273-292.
