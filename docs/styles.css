@@ -1,12 +1,11 @@
 /* css styles */
-.sidebar-logo {
+.sidebar-header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
 }
 
-.sidebar-logo img {
-  max-height: 50px;
-  width: auto;
+.sidebar-header .logo img {
+  max-width: 150px; /* Adjust the value as needed */
+  height: auto;
 }

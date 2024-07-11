@@ -1,10 +1,10 @@
 ---
 title: "3-PG User Guide"
-image: media/3PG_Logo.png
+image: media/forest.jpg
 toc: false
 about: 
-  template: solana
-  image-shape: rectangle
+  template: trestles
+  image-shape: round
   image-width: 20em
   #links:
    # - text: 3-PG Forest Growth Model
