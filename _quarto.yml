@@ -21,7 +21,7 @@ website:
       - Section_7.qmd
       
   page-footer:
-    left: <img src="media/IRSS_logo_colour.png" alt="Logo" style="height:50px;">
+    left: <a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a>
     right: <img src="media/BP_logo.png" alt="Logo" style="height:50px;">
     #center: <img src="media/3PG_Logo.png" alt="Logo" style="height:50px;">
 
@@ -29,8 +29,6 @@ format:
   html:
     theme: flatly
     css: /styles.css
-    #code-block-bg: true
-    #code-border-left: "#31BAE9"
     toc: true
 
 editor: visual

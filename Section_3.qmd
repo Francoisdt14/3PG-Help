@@ -32,7 +32,7 @@ Comments are allowed in the parameter file. Comments can appear almost anywhere,
 
 The site parameter file includes two types of parameters. Site characteristics, and climate parameters, which are referred to as 'series' parameters. The site parameter file typically contains the following parameters:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 // Site and Stand Descriptors
 Latitude (Latitude)
 Soil fertility (Fertility rating)
@@ -91,8 +91,13 @@ The second format for series parameters allows for climate values to be associat
 
 This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
-::: callout-note
-The parameter "output directory" gives the path to a directory in which output rasters will be written.
+::: callout-important
+The parameter "Model mode" is required and should appear at the top of the site paramter file. The parameter "output directory" is also required and gives the path to a directory in which output rasters will be written. For example:
+
+```         
+"Model mode" 3PG
+"Output directory" D:\3-PGS_MODEL
+```
 :::
 
 **Management Tables**
@@ -103,7 +108,7 @@ Management tables in the C++ version of 3-PG are completely analagous to those i
 
 Management tables are indicated in the parameter file by one of the three keyword phrases: "Management: fertility", "Management: Irrigation", or "Management: MinASW". The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
   "Management: irrigation"
     1994  8
     1997  irr1997.tif
@@ -119,5 +124,5 @@ The irrigation management variable can only be provided with a management table.
 As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.
 
 ::: callout-tip
-Example parameter files are provided in Section 7
+Example parameter files are provided in [Section 7](./Section_7.qmd)
 :::

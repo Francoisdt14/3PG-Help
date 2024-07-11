@@ -224,7 +224,7 @@ Note
 </div>
 <p><strong>Site Parameter File</strong></p>
 <p>The site parameter file includes two types of parameters. Site characteristics, and climate parameters, which are referred to as ‘series’ parameters. The site parameter file typically contains the following parameters:</p>
-<pre class="custom-block"><code>// Site and Stand Descriptors
+<pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>// Site and Stand Descriptors
 Latitude (Latitude)
 Soil fertility (Fertility rating)
 Soil texture (Soil class)
@@ -260,24 +260,26 @@ Frost days per month (Frost)</code></pre>
 1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0</code></pre>
 <p>This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The parameter “output directory” gives the path to a directory in which output rasters will be written.</p>
+<p>The parameter “Model mode” is required and should appear at the top of the site paramter file. The parameter “output directory” is also required and gives the path to a directory in which output rasters will be written. For example:</p>
+<pre><code>"Model mode" 3PG
+"Output directory" D:\3-PGS_MODEL</code></pre>
 </div>
 </div>
 <p><strong>Management Tables</strong></p>
 <p>3-PG can make use of “management tables”. These tables allow arbitrary changes to be made to some of the model variables at particular points in time, simulating the effect of management actions. Three management tables are recognised, allowing control of model variables representing fertility (FR), irrigation (Irrig) and minimum available soil water (MinASW).</p>
 <p>Management tables in the C++ version of 3-PG are completely analagous to those in the Excel version, with the one difference that the C++ version requires management tables to be listed in calendar years (the Excel version requires tables listed by stand age).</p>
 <p>Management tables are indicated in the parameter file by one of the three keyword phrases: “Management: fertility”, “Management: Irrigation”, or “Management: MinASW”. The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:</p>
-<pre class="custom-block"><code>  "Management: irrigation"
+<pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>  "Management: irrigation"
     1994  8
     1997  irr1997.tif
     2000  0</code></pre>
@@ -295,7 +297,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Example parameter files are provided in Section 7</p>
+<p>Example parameter files are provided in <a href="./Section_7.html">Section 7</a></p>
 </div>
 </div>
 
@@ -716,7 +718,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="media/IRSS_logo_colour.png" alt="Logo" style="height:50px;"></p>
+<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

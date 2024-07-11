@@ -26,7 +26,7 @@ Climate data can be found from a variety of sources. In North America, [ClimateN
 
 Site factors required include latitude, soil water information, and soil descriptors:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 Latitude (site or pixel latitude)
 Maximum available soil water (mm)
 Minimum available soil water (mm)
@@ -38,7 +38,7 @@ Depending on where your simulations occur, these layers may be freely available,
 
 In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha^-1^), 3 (t ha^-1^), and 1 (t ha^-1^) respectively when a stand is being initialized from a seedling. The full list of site conditions are found below:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 Start age of the trees at the start of the simulation
 Start month of the simulation
 Year the stand was planted
@@ -57,7 +57,7 @@ Rasters are required to be spatially aligned; they need to share identical exten
 
 Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as **examples**. The full list of required parameters are provided below:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 "Foliage:stem partitioning ratio @ D=2 cm"        
 "Foliage:stem partitioning ratio @ D=20 cm"        
 "Constant in the stem mass v. diam. relationship"        

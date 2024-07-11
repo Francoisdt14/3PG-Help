@@ -26,7 +26,7 @@ Will produce grids every month from 1975.
 
 The full list of output variables available in standard 3PG and spatial modes is:
 
-```{.custom-block}
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 short name     long name
 --------------------------------------
 "StemNo"       "Stocking density"
@@ -50,7 +50,7 @@ short name     long name
 
 The full list of output variables available in 3PGS and spatial modes is:
 
-```{.custom-block}
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 short name     long name
 --------------------------------------
 "NPP"          "Net Primary Production (tDM/ha)"

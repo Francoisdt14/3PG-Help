@@ -9,11 +9,3 @@
   max-width: 150px; /* Adjust the value as needed */
   height: auto;
 }
-
-pre.custom-block {
-  background-color: #f0f0f0 !important;  /* Light grey background */
-}
-
-pre.custom-block code {
-  color: black !important;  /* Black text */
-}
