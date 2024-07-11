@@ -62,7 +62,13 @@ Parameters that describe site conditions can be prodided as constants, or raster
 For example:
 
 ```         
-"Fertility rating",  0.7 "Fertility rating",  D:\...\fert.tif
+"Fertility rating",  0.7
+```
+
+or
+
+```         
+"Fertility rating",  fert.tif
 ```
 
 In the first case, fertility would be set to a constant value of 25. In the second case, a raster is used to set the fertility value across an area of interest.
@@ -88,3 +94,5 @@ This gives constant zero values to precipitation for the first 6 months of 1996,
 **Management Tables**
 
 **Species Parameter File**
+
+As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.

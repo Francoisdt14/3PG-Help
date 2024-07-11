@@ -6,6 +6,10 @@ title: "Other Implementations"
 
 Originally, 3-PG was written...
 
+An extensive user guide can be found [here](https://3pg.forestry.ubc.ca/files/2014/04/3PGpjs_UserManual.pdf)
+
 ### r3PG
 
-The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accompanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail here: <https://doi.org/10.1111/2041-210X.13474>
+The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accompanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail [here](https://doi.org/10.1111/2041-210X.13474)[^1].
+
+[^1]: Trotsiuk, V., Hartig, F., & Forrester, D. I. (2020). r3PG–An r package for simulating forest growth using the 3‐PG process‐based model. *Methods in Ecology and Evolution*, *11*(11), 1470-1475.

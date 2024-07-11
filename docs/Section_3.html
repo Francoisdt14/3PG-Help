@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Case Studies</span></a>
+ <span class="menu-text">3-PG Output Variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Resources</span></a>
+ <span class="menu-text">Additional Resources and Examples</span></a>
   </div>
 </li>
     </ul>
@@ -248,7 +248,9 @@ Monthly mean short-wave radiation (Solar radtn)
 Frost days per month (Frost)</code></pre>
 <p>Parameters that describe site conditions can be prodided as constants, or rasters.</p>
 <p>For example:</p>
-<pre><code>"Fertility rating",  0.7 "Fertility rating",  D:\...\fert.tif</code></pre>
+<pre><code>"Fertility rating",  0.7</code></pre>
+<p>or</p>
+<pre><code>"Fertility rating",  fert.tif</code></pre>
 <p>In the first case, fertility would be set to a constant value of 25. In the second case, a raster is used to set the fertility value across an area of interest.</p>
 <p>Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by whitespace, followed by 12 values. For example, this line:</p>
 <pre><code>"frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0</code></pre>
@@ -260,6 +262,7 @@ Frost days per month (Frost)</code></pre>
 <p>This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
 <p><strong>Management Tables</strong></p>
 <p><strong>Species Parameter File</strong></p>
+<p>As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.</p>
 
 
 </section>

@@ -2,21 +2,60 @@
 title: "Input Datasets"
 ---
 
-3-PG requires climatic data, data describing the physical properties of the site, and a species specific parameter file.
-
-### Site Characteristics
-
-Site factors required include: latitude (º), maximum available water stored in the soil (mm), and oil fertility rating. In addition, initial conditions such as stem, root, and foliage biomass, stocking, and soil water at some time are needed.
+3-PG requires climatic data, data describing the physical properties of the site, and a species-specific parameter file. The C++ implementation of 3-PG is designed to provide spatially explicit estimates of forest growth parameters, which means that rasters can be used for any parameter that varies across the landscape, while constants can be used for those that do not. Below is a summary of the parameters that are required for 3-PG, as well data preparation requirements.
 
 ### Climate Data
 
-The following climate data is required for 3-PG to run: monthly maximum and minimum temperature (ºC), monthly mean daily solar radiation (MJ m^-2^ d^-1^), precipitation (mm month^-1^), and frost days.
+The following climate data is required for 3-PG to run:
 
-Climate data can be found from a variety of sources.. **example**
+```         
+Monthly means of maximum daily temperature (ºC)
+Monthly means of minimum daily temperature (ºC)
+Monthly mean rainfall (mm month-1)
+Monthly mean short-wave radiation (MJ m-2 d-1)
+Frost days per month
+```
+
+Climate data can be found from a variety of sources. In North America, [ClimateNA](https://climatena.ca/) is commonly used. ClimateNA is a free software package that generates scale-free climate data, and can use a digital elevation model (DEM) to produce gridded data at any spatial resolution. Both past and future climate projections can be generated; you can read more about the methodology to derive these estimates [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)[^1] and [here](https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7566)[^2].
+
+[^1]: Wang T, Hamann A, Spittlehouse D, Carroll C (2016) [Locally Downscaled and Spatially Customizable Climate Data for Historical and Future Periods for North Americ](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)a. PLoS ONE 11(6): e0156720. doi:10.1371/journal.pone.0156720
+
+[^2]: Mahony, CR, Wang, T; Hamann, A and Cannon, AJ, 2022. A CMIP6 ensemble for downscaled monthly climate normals over North America. International Journal of Climatology 42 (11), 5871-5891 DOI: https://doi.org/10.1002/joc.7566
+
+### Site Characteristics
+
+Site factors required include latitude, soil water information, and soil descriptors:
+
+```         
+Latitude (site or pixel latitude)
+Maximum available soil water (mm)
+Minimum available soil water (mm)
+Soil class (1-4, ? for default)
+Soil fertility rating (0-1)
+```
+
+Depending on where your simulations occur, these layers may be freely available, while others can be derived from auxiliary data such as a DEM. \[**addition of CO2 to come**\].
+
+In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha^-1^), 3 (t ha^-1^), and 1 (t ha^-1^) respectively when a stand is being initialized from a seedling. The full list of site conditions are found below:
+
+```         
+Start age of the trees at the start of the simulation
+Start month of the simulation
+Year the stand was planted
+Initial foliage biomass
+Initial root biomass
+Initial stem biomass
+Initial stem number
+Initial available soil water
+```
+
+### Data Preparation
+
+Rasters are required to be spatially aligned; they need to share identical extent, resolution, and projection information. The 3-PG executable accesses rasters through the command line, and as such their path is hard coded into the parameter files. It is therefore recommended to place the rasters in a logical folder structure.
 
 ### Species Parameters
 
-Parameters characterising the species of interest is required for 3-PG. Species parameterizations for often exist for common commercial species such as **examples**
+Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as **examples**. The full list of required parameters are provided below:
 
 ```         
 "Foliage:stem partitioning ratio @ D=2 cm"        
