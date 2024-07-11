@@ -2,11 +2,15 @@
 title: "The C++ Executable"
 ---
 
-Step-by-step user guide for forest simulation with the C++ executable
+Step-by-step user guide for forest simulation with the C++ executable.
 
 ### System requirements?
 
-### Installation process?
+The 3-PG executable can be run on Windows (Mac? Linux?).
+
+### Installation process
+
+To use the executable, copy and paste it to your desired location. After that, all you need is the file path.
 
 ### Usage
 
@@ -15,7 +19,7 @@ Step-by-step user guide for forest simulation with the C++ executable
 The usage of the program is:
 
 ```         
-3pg -d default_file -s site_file
+3PG -d default_file -s site_file
 ```
 
 3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 4](./Section_4.qmd).
@@ -92,7 +96,7 @@ The second format for series parameters allows for climate values to be associat
 This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
 ::: callout-important
-The parameter "Model mode" is required and should appear at the top of the site paramter file. The parameter "output directory" is also required and gives the path to a directory in which output rasters will be written. For example:
+The parameters "Model mode" and "Output directory" are required, and should appear at the top of the site parameter file. "Output directory" gives the path to a directory in which output rasters will be written. For example:
 
 ```         
 "Model mode" 3PG
