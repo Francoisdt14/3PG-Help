@@ -29,6 +29,8 @@ format:
   html:
     theme: flatly
     css: styles.css
+    code-block-bg: true
+    code-border-left: "#31BAE9"
     toc: true
 
 editor: visual

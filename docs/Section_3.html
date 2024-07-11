@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3-PG Output Variables</span></a>
+ <span class="menu-text">3-PG Outputs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -224,7 +224,7 @@ Note
 </div>
 <p><strong>Site Parameter File</strong></p>
 <p>The site parameter file includes two types of parameters. Site characteristics, and climate parameters, which are referred to as ‘series’ parameters. The site parameter file typically contains the following parameters:</p>
-<pre><code>// Site and Stand Descriptors
+<pre class="custom-block"><code>// Site and Stand Descriptors
 Latitude (Latitude)
 Soil fertility (Fertility rating)
 Soil texture (Soil class)
@@ -260,9 +260,44 @@ Frost days per month (Frost)</code></pre>
 1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0</code></pre>
 <p>This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The parameter “output directory” gives the path to a directory in which output rasters will be written.</p>
+</div>
+</div>
 <p><strong>Management Tables</strong></p>
+<p>3-PG can make use of “management tables”. These tables allow arbitrary changes to be made to some of the model variables at particular points in time, simulating the effect of management actions. Three management tables are recognised, allowing control of model variables representing fertility (FR), irrigation (Irrig) and minimum available soil water (MinASW).</p>
+<p>Management tables in the C++ version of 3-PG are completely analagous to those in the Excel version, with the one difference that the C++ version requires management tables to be listed in calendar years (the Excel version requires tables listed by stand age).</p>
+<p>Management tables are indicated in the parameter file by one of the three keyword phrases: “Management: fertility”, “Management: Irrigation”, or “Management: MinASW”. The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:</p>
+<pre class="custom-block"><code>  "Management: irrigation"
+    1994  8
+    1997  irr1997.tif
+    2000  0</code></pre>
+<p>In the example above, if we assume that the “year planted” parameter has the value 1989, then for every year up to, but not including, 1994, 8 ML/year of irrigation is applied, over the whole run area. For the years 1994, 1995 and 1996, each cell will receive the irrigation specified in the grid file irr1997.tif. If a cell contains the NODATA value, the effect of the previous entry in the management table persists. For the years 1998 and on, zero irrigation is applied throughout the whole run area. This carry over of the last entry of the management table duplicates the working of the Excel version.</p>
+<p>The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.</p>
 <p><strong>Species Parameter File</strong></p>
 <p>As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Example parameter files are provided in Section 7</p>
+</div>
+</div>
 
 
 </section>

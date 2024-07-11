@@ -1,3 +1,60 @@
 ---
-title: "3-PG Output Variables"
+title: "3-PG Outputs"
 ---
+
+### The Log file
+
+3-PG writes a log file, which contains some details of the progress of the model, and is particularly usefull for finding problems in the parameter files. The log file will be called "logfile.txt", and will be written to the directory specified by the parameter "output path", or the current directory should this parameter not be found.
+
+### Outputs
+
+The outputs available from 3PG depend on whether it is being used in point or grid mode, and in standard or satellite mode.
+
+In point mode, the parameter "output file" is required, and gives the name of an output file. All available output variables will be logged in this file. In standard mode a large set of variables will be logged on a one year timestep. In satellite mode 4 variables will be logged on a monthly timestep.
+
+In grid mode, the parameter "output directory" gives a path to a directory in which output grid files will be written. The output variables are selected and named as demonstrated in the example file. In standard mode 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt.
+
+In grid and standard mode the output variables are written at the end of the model run. Grids of intermediate values can also be written, by placing a start year and recurrence interval after the output grid parameter. For example:
+
+"Weight of stems" wstem.flt 1975 1 month 1
+
+will cause the variable "weight of stems" to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the "weight of stems" variable to be saved to grid files called wstem197501.flt, wstem198001.flt, etc. Using the keyword "monthly":
+
+"Weight of stems" wstem.flt 1975 1 monthly
+
+Will produce grids every month from 1975.
+
+The full list of output variables available in standard 3PG and spatial modes is:
+
+```{.custom-block}
+short name     long name
+--------------------------------------
+"StemNo"       "Stocking density"
+"WF"           "Weight of foliage"
+"WR"           "Weight of roots"
+"WS"           "Weight of stems"
+"TotalW"       "Total weight"
+"MAI"          "Mean Annual Increment"
+"avDBH"        "Average DBH"
+"BasArea"      "Basal Area"
+"StandVol"     "Stand volume"
+"Transp"       "Transpiration"
+"ASW"          "Available Soil Water"
+"fSW"        "Soil water modifier"
+"fVPD"         "VPD modifier"
+"evaporation"  "Canopy Evaporation"
+"LAIx"       "Maximum Leaf Area Index"
+"ageLAIx"    "Age at Maximum Leaf Area"
+"LAI"          "Leaf Area Index"
+```
+
+The full list of output variables available in 3PGS and spatial modes is:
+
+```{.custom-block}
+short name     long name
+--------------------------------------
+"NPP"          "Net Primary Production (tDM/ha)"
+"delWAG"       "change in aboveground biomass (tDM/ha)"
+"cumWabv"      "accumulated aboveground biomass (tDM/ha)"
+"LAI"          "Leaf Area Index"
+```

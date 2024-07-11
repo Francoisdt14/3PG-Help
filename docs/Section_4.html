@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3-PG User Guide - 3-PG Output Variables</title>
+<title>3-PG User Guide - 3-PG Outputs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Section_4.html">3-PG Output Variables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Section_4.html">3-PG Outputs</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3-PG Output Variables</span></a>
+ <span class="menu-text">3-PG Outputs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,14 +159,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-log-file" id="toc-the-log-file" class="nav-link active" data-scroll-target="#the-log-file">The Log file</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">Outputs</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3-PG Output Variables</h1>
+<h1 class="title">3-PG Outputs</h1>
 </div>
 
 
@@ -183,8 +190,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="the-log-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-log-file">The Log file</h3>
+<p>3-PG writes a log file, which contains some details of the progress of the model, and is particularly usefull for finding problems in the parameter files. The log file will be called “logfile.txt”, and will be written to the directory specified by the parameter “output path”, or the current directory should this parameter not be found.</p>
+</section>
+<section id="outputs" class="level3">
+<h3 class="anchored" data-anchor-id="outputs">Outputs</h3>
+<p>The outputs available from 3PG depend on whether it is being used in point or grid mode, and in standard or satellite mode.</p>
+<p>In point mode, the parameter “output file” is required, and gives the name of an output file. All available output variables will be logged in this file. In standard mode a large set of variables will be logged on a one year timestep. In satellite mode 4 variables will be logged on a monthly timestep.</p>
+<p>In grid mode, the parameter “output directory” gives a path to a directory in which output grid files will be written. The output variables are selected and named as demonstrated in the example file. In standard mode 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt.</p>
+<p>In grid and standard mode the output variables are written at the end of the model run. Grids of intermediate values can also be written, by placing a start year and recurrence interval after the output grid parameter. For example:</p>
+<p>“Weight of stems” wstem.flt 1975 1 month 1</p>
+<p>will cause the variable “weight of stems” to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the “weight of stems” variable to be saved to grid files called wstem197501.flt, wstem198001.flt, etc. Using the keyword “monthly”:</p>
+<p>“Weight of stems” wstem.flt 1975 1 monthly</p>
+<p>Will produce grids every month from 1975.</p>
+<p>The full list of output variables available in standard 3PG and spatial modes is:</p>
+<pre class="custom-block"><code>short name     long name
+--------------------------------------
+"StemNo"       "Stocking density"
+"WF"           "Weight of foliage"
+"WR"           "Weight of roots"
+"WS"           "Weight of stems"
+"TotalW"       "Total weight"
+"MAI"          "Mean Annual Increment"
+"avDBH"        "Average DBH"
+"BasArea"      "Basal Area"
+"StandVol"     "Stand volume"
+"Transp"       "Transpiration"
+"ASW"          "Available Soil Water"
+"fSW"        "Soil water modifier"
+"fVPD"         "VPD modifier"
+"evaporation"  "Canopy Evaporation"
+"LAIx"       "Maximum Leaf Area Index"
+"ageLAIx"    "Age at Maximum Leaf Area"
+"LAI"          "Leaf Area Index"</code></pre>
+<p>The full list of output variables available in 3PGS and spatial modes is:</p>
+<pre class="custom-block"><code>short name     long name
+--------------------------------------
+"NPP"          "Net Primary Production (tDM/ha)"
+"delWAG"       "change in aboveground biomass (tDM/ha)"
+"cumWabv"      "accumulated aboveground biomass (tDM/ha)"
+"LAI"          "Leaf Area Index"</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

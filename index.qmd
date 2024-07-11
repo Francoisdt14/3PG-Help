@@ -29,9 +29,9 @@ Here is the landing page for the 3-PG User Guide. This website includes the foll
 
 -   A step-by-step guide to using the 3-PG executable
 
-#### 4. Case Study
+#### 4. 3-PG Outputs
 
--   Example outputs using some small sample data?
+-   Available output variables
 
 #### 5. Other Implementations of 3-PG
 
