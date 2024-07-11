@@ -8,7 +8,7 @@ title: "Input Datasets"
 
 The following climate data is required for 3-PG to run:
 
-``` custom-block
+``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 Monthly means of maximum daily temperature (ºC)
 Monthly means of minimum daily temperature (ºC)
 Monthly mean rainfall (mm month-1)
