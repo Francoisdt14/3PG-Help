@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Species Parameterization</span></a>
+ <span class="menu-text">Species Parameterizations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,8 +217,8 @@ Maximum available soil water (mm)
 Minimum available soil water (mm)
 Soil class (1-4, ? for default)
 Soil fertility rating (0-1)</code></pre>
-<p>Depending on where your simulations occur, these layers may be freely available, while others can be derived from auxiliary data such as a DEM. [<strong>addition of CO2 to come</strong>].</p>
-<p>In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha<sup>-1</sup>), initial stocking (trees ha<sup>-1</sup>), and soil water (mm) at the start of the simulation. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha<sup>-1</sup>), 3 (t ha<sup>-1</sup>), and 1 (t ha<sup>-1</sup>) respectively when a stand is being initialized from a seedling. The full list of site conditions are found below:</p>
+<p>Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. [<strong>CO2 factor to come!</strong>].</p>
+<p>In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha<sup>-1</sup>), initial stocking (trees ha<sup>-1</sup>), and soil water (mm) at the start of the simulation. The full list of site conditions are found below:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>Start age of the trees at the start of the simulation
 Start month of the simulation
 Year the stand was planted
@@ -227,6 +227,7 @@ Initial root biomass
 Initial stem biomass
 Initial stem number
 Initial available soil water</code></pre>
+<p>Variables describing starting conditions can often be found in literature or planting guidelines depending on the location and species of interest. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha<sup>-1</sup>), 3 (t ha<sup>-1</sup>), and 1 (t ha<sup>-1</sup>) respectively when a stand is being initialized from a seedling.</p>
 </section>
 <section id="data-preparation" class="level3">
 <h3 class="anchored" data-anchor-id="data-preparation">🔧 Data Preparation</h3>
@@ -234,7 +235,7 @@ Initial available soil water</code></pre>
 </section>
 <section id="species-parameters" class="level3">
 <h3 class="anchored" data-anchor-id="species-parameters">🌲 Species Parameters</h3>
-<p>Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as <strong>examples</strong>. The full list of required parameters are provided below:</p>
+<p>Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as <a href="https://www.sciencedirect.com/science/article/pii/S037811270800296X">Douglas-fir</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and <a href="https://www.sciencedirect.com/science/article/pii/S037811271631204X">lodepole pine</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. The full list of required parameters are provided below:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>"Foliage:stem partitioning ratio @ D=2 cm"        
 "Foliage:stem partitioning ratio @ D=20 cm"        
 "Constant in the stem mass v. diam. relationship"        
@@ -285,6 +286,7 @@ Initial available soil water</code></pre>
 "Slope of net v. solar radiation relationship"        
 "Molecular weight of dry matter"        
 "Conversion of solar radiation to PAR" </code></pre>
+<p>Additional species parameterizations can be found <strong>WHERE</strong></p>
 
 
 </section>
@@ -295,6 +297,8 @@ Initial available soil water</code></pre>
 <ol>
 <li id="fn1"><p>Wang T, Hamann A, Spittlehouse D, Carroll C (2016)&nbsp;<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720">Locally Downscaled and Spatially Customizable Climate Data for Historical and Future Periods for North Americ</a>a. PLoS ONE 11(6): e0156720. doi:10.1371/journal.pone.0156720<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Mahony, CR, Wang, T; Hamann, A and Cannon, AJ, 2022. A CMIP6 ensemble for downscaled monthly climate normals over North America. International Journal of Climatology 42 (11), 5871-5891 DOI: https://doi.org/10.1002/joc.7566<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Waring, R., Nordmeyer, A., Whitehead, D., Hunt, J., Newton, M., Thomas, C., &amp; Irvine, J. (2008). Why is the productivity of Douglas-fir higher in New Zealand than in its native range in the Pacific Northwest, USA?.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>255</em>(12), 4040-4046.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Meyer, G., Black, T. A., Jassal, R. S., Nesic, Z., Grant, N. J., Spittlehouse, D. L., … &amp; Bowler, R. (2017). Measurements and simulations using the 3-PG model of the water balance and water use efficiency of a lodgepole pine stand following mountain pine beetle attack.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>393</em>, 89-104.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

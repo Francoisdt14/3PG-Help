@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Species Parameterization</span></a>
+ <span class="menu-text">Species Parameterizations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -202,8 +202,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="outputs" class="level3">
 <h3 class="anchored" data-anchor-id="outputs">🗺️ Outputs</h3>
-<p>The parameter “output directory” gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in <a href="./Section_7.html">Section 7</a>. In standard mode</p>
-<p>Check this … 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt. …</p>
+<p>The parameter “output directory” gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in <a href="./Section_7.html">Additional Resources and Examples</a>. In standard mode</p>
+<p><strong>Check this</strong> … 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt. -&gt; <strong>satellite mode has not been disabled, just need to be clear in the instructions on usage</strong></p>
 <p>Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:</p>
 <pre><code>"Weight of stems" wstem.tif 1975 1 month 1</code></pre>
 <p>will cause the variable “weight of stems” to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the “weight of stems” variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword “monthly”:</p>
@@ -229,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 "LAIx"       "Maximum Leaf Area Index"
 "ageLAIx"    "Age at Maximum Leaf Area"
 "LAI"          "Leaf Area Index"</code></pre>
-<p><strong>Check this how much of this has changed? Do we still have satellite capability</strong></p>
+<p><strong>Check this how much of this has changed - currently satellite mode enabled</strong></p>
 <p>The full list of output variables available in 3PGS and spatial modes is:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>short name     long name
 --------------------------------------

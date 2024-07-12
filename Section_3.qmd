@@ -6,15 +6,15 @@ Step-by-step user guide for forest simulation with the C++ executable.
 
 ### 💻 System requirements?
 
-The 3-PG executable can be run on Windows (Mac? Linux?).
+The 3-PG executable can be run on Windows (still need to test Mac and/or Linux). And minimum system requirements can be highlighted here, or we can send readers to [Technical Details](./Section_8.qmd).
 
 ### ⚙️ Installation process
 
 To use the executable, copy and paste it to your desired location. After that, all you need is the file path.
 
-###  ✍️ Usage
+### ✍️ Usage
 
-3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in [Section 5](./Section_5.qmd)).
+3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in [Other Implementations](./Section_5.qmd)).
 
 The usage of the program is:
 
@@ -22,7 +22,7 @@ The usage of the program is:
 3PG -d default_file -s site_file
 ```
 
-3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 7](./Section_7.qmd).
+3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Additional Resources and Examples](./Section_7.qmd).
 
 ### 📄 Parameter Files
 
@@ -96,12 +96,7 @@ The second format for series parameters allows for climate values to be associat
 This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
 ::: callout-important
-The parameters "Model mode" and "Output directory" are required, and should appear at the top of the site parameter file. "Output directory" gives the path to a directory in which output rasters will be written. For example:
-
-```         
-"Model mode" 3PG
-"Output directory" D:\3-PGS_MODEL
-```
+Make sure to check the formatting of your parameter files! Any misspellings or errant commas can lead to 3-PG failing.
 :::
 
 **Management Tables**
@@ -123,10 +118,19 @@ In the example above, if we assume that the "year planted" parameter has the val
 
 The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.
 
+Finally, the parameters "Model mode" and "Output directory" are required, and should appear at the top of the site parameter file. "Model mode" can be given as '3PG' for standard usage, and '3PGS' for satellite mode. Output directory" gives the path to a directory in which output rasters will be written. For example:
+
+```         
+"Model mode" 3PG
+"Output directory" D:\3-PGS_MODEL
+```
+
+Would use the standard mode of 3PG and write all output files to the "D:\\3-PGS_MODEL" folder.
+
 **Species Parameter File**
 
-As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.
+As mentioned in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.
 
 ::: callout-tip
-Example parameter files are provided in [Section 7](./Section_7.qmd)
+Example parameter files and how they are used are provided in the [Additional Resources and Examples](./Section_7.qmd) section.
 :::

@@ -34,9 +34,9 @@ Soil class (1-4, ? for default)
 Soil fertility rating (0-1)
 ```
 
-Depending on where your simulations occur, these layers may be freely available, while others can be derived from auxiliary data such as a DEM. \[**addition of CO2 to come**\].
+Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. \[**CO2 factor to come!**\].
 
-In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha^-1^), 3 (t ha^-1^), and 1 (t ha^-1^) respectively when a stand is being initialized from a seedling. The full list of site conditions are found below:
+In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. The full list of site conditions are found below:
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 Start age of the trees at the start of the simulation
@@ -49,13 +49,19 @@ Initial stem number
 Initial available soil water
 ```
 
+Variables describing starting conditions can often be found in literature or planting guidelines depending on the location and species of interest. Initial stem, root, and foliage biomass are commonly given the values 6 (t ha^-1^), 3 (t ha^-1^), and 1 (t ha^-1^) respectively when a stand is being initialized from a seedling.
+
 ### 🔧 Data Preparation
 
 Rasters are required to be spatially aligned; they need to share identical extent, resolution, and projection information. The 3-PG executable accesses rasters through the command line, and as such their path is hard coded into the parameter files. It is therefore recommended to place the rasters in a logical folder structure.
 
 ### 🌲 Species Parameters
 
-Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as **examples**. The full list of required parameters are provided below:
+Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as [Douglas-fir](https://www.sciencedirect.com/science/article/pii/S037811270800296X)[^3] and [lodepole pine](https://www.sciencedirect.com/science/article/pii/S037811271631204X)[^4]. The full list of required parameters are provided below:
+
+[^3]: Waring, R., Nordmeyer, A., Whitehead, D., Hunt, J., Newton, M., Thomas, C., & Irvine, J. (2008). Why is the productivity of Douglas-fir higher in New Zealand than in its native range in the Pacific Northwest, USA?. *Forest Ecology and Management*, *255*(12), 4040-4046.
+
+[^4]: Meyer, G., Black, T. A., Jassal, R. S., Nesic, Z., Grant, N. J., Spittlehouse, D. L., ... & Bowler, R. (2017). Measurements and simulations using the 3-PG model of the water balance and water use efficiency of a lodgepole pine stand following mountain pine beetle attack. *Forest Ecology and Management*, *393*, 89-104.
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 "Foliage:stem partitioning ratio @ D=2 cm"        
@@ -109,3 +115,5 @@ Parameters characterizing the species of interest is required for 3-PG. These pa
 "Molecular weight of dry matter"        
 "Conversion of solar radiation to PAR" 
 ```
+
+Additional species parameterizations can be found **WHERE**

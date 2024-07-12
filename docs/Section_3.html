@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Section_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Species Parameterization</span></a>
+ <span class="menu-text">Species Parameterizations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Step-by-step user guide for forest simulation with the C++ executable.</p>
 <section id="system-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="system-requirements">💻 System requirements?</h3>
-<p>The 3-PG executable can be run on Windows (Mac? Linux?).</p>
+<p>The 3-PG executable can be run on Windows (still need to test Mac and/or Linux). And minimum system requirements can be highlighted here, or we can send readers to <a href="./Section_8.html">Technical Details</a>.</p>
 </section>
 <section id="installation-process" class="level3">
 <h3 class="anchored" data-anchor-id="installation-process">⚙️ Installation process</h3>
@@ -209,10 +209,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">✍️ Usage</h3>
-<p>3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in <a href="./Section_5.html">Section 5</a>).</p>
+<p>3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in <a href="./Section_5.html">Other Implementations</a>).</p>
 <p>The usage of the program is:</p>
 <pre><code>3PG -d default_file -s site_file</code></pre>
-<p>3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the ‘default’ and the ‘site’ parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of <a href="./Section_7.html">Section 7</a>.</p>
+<p>3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the ‘default’ and the ‘site’ parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of <a href="./Section_7.html">Additional Resources and Examples</a>.</p>
 </section>
 <section id="parameter-files" class="level3">
 <h3 class="anchored" data-anchor-id="parameter-files">📄 Parameter Files</h3>
@@ -278,9 +278,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The parameters “Model mode” and “Output directory” are required, and should appear at the top of the site parameter file. “Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
-<pre><code>"Model mode" 3PG
-"Output directory" D:\3-PGS_MODEL</code></pre>
+<p>Make sure to check the formatting of your parameter files! Any misspellings or errant commas can lead to 3-PG failing.</p>
 </div>
 </div>
 <p><strong>Management Tables</strong></p>
@@ -293,8 +291,12 @@ Important
     2000  0</code></pre>
 <p>In the example above, if we assume that the “year planted” parameter has the value 1989, then for every year up to, but not including, 1994, 8 ML/year of irrigation is applied, over the whole run area. For the years 1994, 1995 and 1996, each cell will receive the irrigation specified in the grid file irr1997.tif. If a cell contains the NODATA value, the effect of the previous entry in the management table persists. For the years 1998 and on, zero irrigation is applied throughout the whole run area. This carry over of the last entry of the management table duplicates the working of the Excel version.</p>
 <p>The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.</p>
+<p>Finally, the parameters “Model mode” and “Output directory” are required, and should appear at the top of the site parameter file. “Model mode” can be given as ‘3PG’ for standard usage, and ‘3PGS’ for satellite mode. Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
+<pre><code>"Model mode" 3PG
+"Output directory" D:\3-PGS_MODEL</code></pre>
+<p>Would use the standard mode of 3PG and write all output files to the “D:\3-PGS_MODEL” folder.</p>
 <p><strong>Species Parameter File</strong></p>
-<p>As mention in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.</p>
+<p>As mentioned in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -305,7 +307,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Example parameter files are provided in <a href="./Section_7.html">Section 7</a></p>
+<p>Example parameter files and how they are used are provided in the <a href="./Section_7.html">Additional Resources and Examples</a> section.</p>
 </div>
 </div>
 
