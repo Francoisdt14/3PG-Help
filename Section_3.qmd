@@ -4,22 +4,15 @@ title: "The C++ Executable"
 
 Step-by-step user guide for forest simulation with the C++ executable.
 
-### <i class="fa-solid fa-cloud"></i> Climate Data
-
-### <i class="fa-solid fa-cloud"></i> Climate Data
-
-### System requirements?
-
-<i class="fa-solid fa-tree"></i>
-<i class="fa-solid fa-computer"></i>
+### 💻 System requirements?
 
 The 3-PG executable can be run on Windows (Mac? Linux?).
 
-### <i class="fa-solid fa-gears"></i> Installation process
+### ⚙️ Installation process
 
 To use the executable, copy and paste it to your desired location. After that, all you need is the file path.
 
-### <i class="fa-solid fa-chalkboard-user"></i> Usage
+###  ✍️ Usage
 
 3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in [Section 5](./Section_5.qmd)).
 
@@ -31,7 +24,7 @@ The usage of the program is:
 
 3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Section 7](./Section_7.qmd).
 
-### <i class="fa-solid fa-scroll"></i> Parameter Files
+### 📄 Parameter Files
 
 The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space seperating the parameter name and its value.
 

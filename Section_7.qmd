@@ -2,11 +2,11 @@
 title: "Additional Resources and Examples"
 ---
 
-### <i class="fa-solid fa-cloud"></i> Helpful Resources
+### 📚 Helpful Resources
 
 The 3-PG website hosted by the UBC Faculty of Forestry contains several helpful documents related to model development, descriptions, studies and additional background information: [UBC 3-PG Website](https://3pg.forestry.ubc.ca/).
 
-### <i class="fa-solid fa-cloud"></i> Example Parameter Files
+### 📄 Example Parameter Files
 
 Below is an example of a generic site template. Note how variables can be provided as a constant or a raster (Site.txt):
 

@@ -2,11 +2,11 @@
 title: "3-PG Outputs"
 ---
 
-### {{<i class="fa-regular fa-file-code"></i>}} The Log file
+### 📜 The Log file
 
 3-PG writes a log file, which contains some details of the progress of the model, and is particularly useful for finding problems in the parameter files. The log file will be called "logfile.txt", and will be written to the directory specified by the parameter "output path", or the current directory should this parameter not be found.
 
-### {{<i class="fa-solid fa-file-image"></i>}} Outputs
+### 🗺️ Outputs
 
 The parameter "output directory" gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in [Section 7](/Section_7.qmd). In standard mode
 

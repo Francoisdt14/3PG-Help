@@ -31,7 +31,6 @@ format:
     theme: flatly
     css: /styles.css
     toc: true
-    fontawesome: true
-
+    
 editor: visual
 

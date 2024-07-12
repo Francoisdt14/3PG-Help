@@ -4,7 +4,7 @@ title: "Input Datasets"
 
 3-PG requires climatic data, data describing the physical properties of the site, and a species-specific parameter file. The C++ implementation of 3-PG is designed to provide spatially explicit estimates of forest growth parameters, which means that rasters can be used for any parameter that varies across the landscape, while constants can be used for those that do not. Below is a summary of the parameters that are required for 3-PG, as well data preparation requirements.
 
-### <i class="fa-solid fa-cloud"></i> Climate Data ☁️
+### ☁️ Climate Data
 
 The following climate data is required for 3-PG to run:
 
@@ -22,7 +22,7 @@ Climate data can be found from a variety of sources. In North America, [ClimateN
 
 [^2]: Mahony, CR, Wang, T; Hamann, A and Cannon, AJ, 2022. A CMIP6 ensemble for downscaled monthly climate normals over North America. International Journal of Climatology 42 (11), 5871-5891 DOI: https://doi.org/10.1002/joc.7566
 
-### <i class="fa-solid fa-earth-americas"></i> Site Characteristics
+### 🌎 Site Characteristics
 
 Site factors required include latitude, soil water information, and soil descriptors:
 
@@ -49,11 +49,11 @@ Initial stem number
 Initial available soil water
 ```
 
-### {{< fa wrench title="wrench" >}} Data Preparation
+### 🔧 Data Preparation
 
 Rasters are required to be spatially aligned; they need to share identical extent, resolution, and projection information. The 3-PG executable accesses rasters through the command line, and as such their path is hard coded into the parameter files. It is therefore recommended to place the rasters in a logical folder structure.
 
-### <i class="fa-solid fa-tree"></i> Species Parameters
+### 🌲 Species Parameters
 
 Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as **examples**. The full list of required parameters are provided below:
 

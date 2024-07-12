@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3-PG User Guide – 3-PG Outputs</title>
+<title>3-PG User Guide - 3-PG Outputs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -169,7 +169,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#the-log-file" id="toc-the-log-file" class="nav-link active" data-scroll-target="#the-log-file">📜 The Log file</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">🗺️ Outputs</a></li>
   </ul>
 </nav>
     </div>
@@ -195,8 +196,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<section id="the-log-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-log-file">📜 The Log file</h3>
+<p>3-PG writes a log file, which contains some details of the progress of the model, and is particularly useful for finding problems in the parameter files. The log file will be called “logfile.txt”, and will be written to the directory specified by the parameter “output path”, or the current directory should this parameter not be found.</p>
+</section>
+<section id="outputs" class="level3">
+<h3 class="anchored" data-anchor-id="outputs">🗺️ Outputs</h3>
+<p>The parameter “output directory” gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in <a href="./Section_7.html">Section 7</a>. In standard mode</p>
+<p>Check this … 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt. …</p>
+<p>Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:</p>
+<pre><code>"Weight of stems" wstem.tif 1975 1 month 1</code></pre>
+<p>will cause the variable “weight of stems” to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the “weight of stems” variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword “monthly”:</p>
+<pre><code>"Weight of stems" wstem.tif 1975 1 monthly</code></pre>
+<p>Will produce grids every month from 1975 until the end of the run.</p>
+<p>The full list of output variables available in 3-PG is:</p>
+<pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>short name     long name
+--------------------------------------
+"StemNo"       "Stocking density"
+"WF"           "Weight of foliage"
+"WR"           "Weight of roots"
+"WS"           "Weight of stems"
+"TotalW"       "Total weight"
+"MAI"          "Mean Annual Increment"
+"avDBH"        "Average DBH"
+"BasArea"      "Basal Area"
+"StandVol"     "Stand volume"
+"Transp"       "Transpiration"
+"ASW"          "Available Soil Water"
+"fSW"        "Soil water modifier"
+"fVPD"         "VPD modifier"
+"evaporation"  "Canopy Evaporation"
+"LAIx"       "Maximum Leaf Area Index"
+"ageLAIx"    "Age at Maximum Leaf Area"
+"LAI"          "Leaf Area Index"</code></pre>
+<p><strong>Check this how much of this has changed? Do we still have satellite capability</strong></p>
+<p>The full list of output variables available in 3PGS and spatial modes is:</p>
+<pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>short name     long name
+--------------------------------------
+"NPP"          "Net Primary Production (tDM/ha)"
+"delWAG"       "change in aboveground biomass (tDM/ha)"
+"cumWabv"      "accumulated aboveground biomass (tDM/ha)"
+"LAI"          "Leaf Area Index"</code></pre>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -613,14 +655,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      <div class="footer-contents"><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></div>  
-    </div>   
+<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-      <div class="footer-contents"><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></div>  
-    </div>
+<p><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></p>
+</div>
   </div>
 </footer>
 
