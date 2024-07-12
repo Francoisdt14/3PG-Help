@@ -4,7 +4,7 @@ title: "Input Datasets"
 
 3-PG requires climatic data, data describing the physical properties of the site, and a species-specific parameter file. The C++ implementation of 3-PG is designed to provide spatially explicit estimates of forest growth parameters, which means that rasters can be used for any parameter that varies across the landscape, while constants can be used for those that do not. Below is a summary of the parameters that are required for 3-PG, as well data preparation requirements.
 
-### <i class="fa-solid fa-cloud"></i> Climate Data
+### <i class="fa-solid fa-cloud"></i> Climate Data ☁️
 
 The following climate data is required for 3-PG to run:
 
