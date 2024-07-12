@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Francois du Toit">
-<meta name="author" content="Nicholas C. Coops">
 
-<title>3-PG User Guide</title>
+<title>3-PG User Guide - Technical Details</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,11 +33,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Section_8.html">Technical Details</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -108,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -156,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Section_8.html" class="sidebar-item-text sidebar-link">
+  <a href="./Section_8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Technical Details</span></a>
   </div>
 </li>
@@ -165,88 +166,50 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#github" id="toc-github" class="nav-link active" data-scroll-target="#github">GitHub <i class="fa-brands fa-github" title="The GitHub octocat logo" aria-label="github"></i></a></li>
+  <li><a href="#additional-technical-information" id="toc-additional-technical-information" class="nav-link" data-scroll-target="#additional-technical-information"><i class="fa-solid fa-gears"></i> Additional Technical Information</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-trestles content">
-  <div class="about-entity">
-    <img src="media/forest.jpg" class="about-image
-  round " style="height: 20em; width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3-PG User Guide</h1>
+<h1 class="title">Technical Details</h1>
 </div>
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Francois du Toit </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            UBC
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Nicholas C. Coops </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            UBC
-          </p>
-      </div>
-  </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<section id="welcome" class="level2">
-<h2 data-anchor-id="welcome">Welcome!</h2>
-<p>You have made it to the home page of the 3-PG User Guide, created by the <a href="https://irsslab.forestry.ubc.ca/">Integrated Remote Sensing Studio</a> in collaboration with BP. This website includes some background on 3-PG, as well as how to use the 3-PG executable. Topics can be explored by using the panel on the left hand side of the page, or clicking the headings directly. Click the 3-PG logo at any time to return to the home page.</p>
-<section id="background" class="level4">
-<h4 data-anchor-id="background">1. <a href="./Section_1.html">Background</a></h4>
-<ul>
-<li>What is 3-PG?</li>
-<li>How does 3-PG Work?</li>
-<li>What can we do with it?</li>
-</ul>
+
+
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">GitHub <i class="fa-brands fa-github" title="The GitHub octocat logo" aria-label="github"></i></h3>
+<p>Underlying code for the executable can be found at this github repository: <strong>include link</strong></p>
 </section>
-<section id="input-datasets" class="level4">
-<h4 data-anchor-id="input-datasets">2. <a href="./Section_2.html">Input Datasets</a></h4>
-<ul>
-<li>What do we need for 3-PG to work</li>
-</ul>
-</section>
-<section id="the-c-executable" class="level4">
-<h4 data-anchor-id="the-c-executable">3. <a href="./Section_3.html">The C++ Executable</a></h4>
-<ul>
-<li>A step-by-step guide to using the 3-PG executable</li>
-</ul>
-</section>
-<section id="pg-outputs" class="level4">
-<h4 data-anchor-id="pg-outputs">4. <a href="./Section_4.html">3-PG Outputs</a></h4>
-<ul>
-<li>Available output variables</li>
-</ul>
-</section>
-<section id="other-implementations-of-3-pg" class="level4">
-<h4 data-anchor-id="other-implementations-of-3-pg">5. <a href="./Section_5.html">Other Implementations of 3-PG</a></h4>
-</section>
-<section id="species-parameterization" class="level4">
-<h4 data-anchor-id="species-parameterization">6. <a href="./Section_6.html">Species Parameterization</a></h4>
-</section>
-<section id="additional-resources" class="level4">
-<h4 data-anchor-id="additional-resources">7. <a href="./Section_7.html">Additional Resources</a></h4>
-</section>
-<section id="technical-details" class="level4">
-<h4 data-anchor-id="technical-details">8. <a href="./Section_8.html">Technical Details</a></h4>
+<section id="additional-technical-information" class="level3">
+<h3 class="anchored" data-anchor-id="additional-technical-information"><i class="fa-solid fa-gears"></i> Additional Technical Information</h3>
+<p>Anything else to add?</p>
 
 
 </section>
-</section>
-</main></div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -267,6 +230,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

@@ -4,7 +4,9 @@ title: "Other Implementations"
 
 Several other versions of the 3-PG model have been developed over time. Below are some examples:
 
-### Excel
+### \<i class="fa-solid fa-cloud"\>\</i\> Excel
+
+<i class="fa-solid fa-cloud"></i>
 
 The Excel implementation of 3-PG was written in Visual Basic for Applications, and works as an add-in for an Excel document. It's primary purpose was to facilitate the use of 3-PG in a research setting, as the flexibility provided allows for testing species adaptation to novel climates, and parameterizing new species. The Excel model can be downloaded [here](https://3pg.forestry.ubc.ca/software/), and an extensive user guide can be found [here](https://3pg.forestry.ubc.ca/files/2014/04/3PGpjs_UserManual.pdf). In addition to the original Excel version, 3-PG~mix~ was developed in an attempt to model mixed stands. More on this implementation can be found [here](https://sites.google.com/site/davidforresterssite/home/projects/3PGmix).
 

@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -153,6 +155,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Additional Resources and Examples</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Section_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Details</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -163,10 +171,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#climate-data" id="toc-climate-data" class="nav-link active" data-scroll-target="#climate-data">Climate Data</a></li>
-  <li><a href="#site-characteristics" id="toc-site-characteristics" class="nav-link" data-scroll-target="#site-characteristics">Site Characteristics</a></li>
-  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data Preparation</a></li>
-  <li><a href="#species-parameters" id="toc-species-parameters" class="nav-link" data-scroll-target="#species-parameters">Species Parameters</a></li>
+  <li><a href="#climate-data" id="toc-climate-data" class="nav-link active" data-scroll-target="#climate-data"><i class="fa-solid fa-cloud"></i> Climate Data</a></li>
+  <li><a href="#site-characteristics" id="toc-site-characteristics" class="nav-link" data-scroll-target="#site-characteristics"><i class="fa-solid fa-earth-americas"></i> Site Characteristics</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><i class="fa-solid fa-wrench" title="wrench" aria-label="wrench"></i> Data Preparation</a></li>
+  <li><a href="#species-parameters" id="toc-species-parameters" class="nav-link" data-scroll-target="#species-parameters"><i class="fa-solid fa-tree"></i> Species Parameters</a></li>
   </ul>
 </nav>
     </div>
@@ -194,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>3-PG requires climatic data, data describing the physical properties of the site, and a species-specific parameter file. The C++ implementation of 3-PG is designed to provide spatially explicit estimates of forest growth parameters, which means that rasters can be used for any parameter that varies across the landscape, while constants can be used for those that do not. Below is a summary of the parameters that are required for 3-PG, as well data preparation requirements.</p>
 <section id="climate-data" class="level3">
-<h3 class="anchored" data-anchor-id="climate-data">Climate Data</h3>
+<h3 class="anchored" data-anchor-id="climate-data"><i class="fa-solid fa-cloud"></i> Climate Data</h3>
 <p>The following climate data is required for 3-PG to run:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>Monthly means of maximum daily temperature (ºC)
 Monthly means of minimum daily temperature (ºC)
@@ -204,7 +212,7 @@ Frost days per month</code></pre>
 <p>Climate data can be found from a variety of sources. In North America, <a href="https://climatena.ca/">ClimateNA</a> is commonly used. ClimateNA is a free software package that generates scale-free climate data, and can use a digital elevation model (DEM) to produce gridded data at any spatial resolution. Both past and future climate projections can be generated; you can read more about the methodology to derive these estimates <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720">here</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and <a href="https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7566">here</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 </section>
 <section id="site-characteristics" class="level3">
-<h3 class="anchored" data-anchor-id="site-characteristics">Site Characteristics</h3>
+<h3 class="anchored" data-anchor-id="site-characteristics"><i class="fa-solid fa-earth-americas"></i> Site Characteristics</h3>
 <p>Site factors required include latitude, soil water information, and soil descriptors:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>Latitude (site or pixel latitude)
 Maximum available soil water (mm)
@@ -223,11 +231,11 @@ Initial stem number
 Initial available soil water</code></pre>
 </section>
 <section id="data-preparation" class="level3">
-<h3 class="anchored" data-anchor-id="data-preparation">Data Preparation</h3>
+<h3 class="anchored" data-anchor-id="data-preparation"><i class="fa-solid fa-wrench" title="wrench" aria-label="wrench"></i> Data Preparation</h3>
 <p>Rasters are required to be spatially aligned; they need to share identical extent, resolution, and projection information. The 3-PG executable accesses rasters through the command line, and as such their path is hard coded into the parameter files. It is therefore recommended to place the rasters in a logical folder structure.</p>
 </section>
 <section id="species-parameters" class="level3">
-<h3 class="anchored" data-anchor-id="species-parameters">Species Parameters</h3>
+<h3 class="anchored" data-anchor-id="species-parameters"><i class="fa-solid fa-tree"></i> Species Parameters</h3>
 <p>Parameters characterizing the species of interest is required for 3-PG. These parameters often exist for common commercial species such as <strong>examples</strong>. The full list of required parameters are provided below:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>"Foliage:stem partitioning ratio @ D=2 cm"        
 "Foliage:stem partitioning ratio @ D=20 cm"        

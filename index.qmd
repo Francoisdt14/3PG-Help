@@ -30,7 +30,7 @@ You have made it to the home page of the 3-PG User Guide, created by the [Integr
 
 -   What do we need for 3-PG to work
 
-#### 3. [The C++ Executable](./Section_3.qmd)
+#### 3. [The C++ Executable](./Section_3.qmd) 
 
 -   A step-by-step guide to using the 3-PG executable
 
@@ -43,3 +43,5 @@ You have made it to the home page of the 3-PG User Guide, created by the [Integr
 #### 6. [Species Parameterization](./Section_6.qmd)
 
 #### 7. [Additional Resources](./Section_7.qmd)
+
+#### 8. [Technical Details](./Section_8.qmd)

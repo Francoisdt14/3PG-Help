@@ -153,6 +153,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Additional Resources and Examples</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Section_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Details</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -163,10 +169,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link active" data-scroll-target="#system-requirements">System requirements?</a></li>
-  <li><a href="#installation-process" id="toc-installation-process" class="nav-link" data-scroll-target="#installation-process">Installation process</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  <li><a href="#parameter-files" id="toc-parameter-files" class="nav-link" data-scroll-target="#parameter-files">Parameter Files</a></li>
+  <li><a href="#climate-data" id="toc-climate-data" class="nav-link active" data-scroll-target="#climate-data"><i class="fa-solid fa-cloud"></i> Climate Data</a></li>
+  <li><a href="#climate-data-1" id="toc-climate-data-1" class="nav-link" data-scroll-target="#climate-data-1"><i class="fa-solid fa-cloud"></i> Climate Data</a></li>
+  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System requirements?</a></li>
+  <li><a href="#installation-process" id="toc-installation-process" class="nav-link" data-scroll-target="#installation-process"><i class="fa-solid fa-gears"></i> Installation process</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage"><i class="fa-solid fa-chalkboard-user"></i> Usage</a></li>
+  <li><a href="#parameter-files" id="toc-parameter-files" class="nav-link" data-scroll-target="#parameter-files"><i class="fa-solid fa-scroll"></i> Parameter Files</a></li>
   </ul>
 </nav>
     </div>
@@ -193,23 +201,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Step-by-step user guide for forest simulation with the C++ executable.</p>
+<section id="climate-data" class="level3">
+<h3 class="anchored" data-anchor-id="climate-data"><i class="fa-solid fa-cloud"></i> Climate Data</h3>
+</section>
+<section id="climate-data-1" class="level3">
+<h3 class="anchored" data-anchor-id="climate-data-1"><i class="fa-solid fa-cloud"></i> Climate Data</h3>
+</section>
 <section id="system-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="system-requirements">System requirements?</h3>
+<p><i class="fa-solid fa-tree"></i> <i class="fa-solid fa-computer"></i></p>
 <p>The 3-PG executable can be run on Windows (Mac? Linux?).</p>
 </section>
 <section id="installation-process" class="level3">
-<h3 class="anchored" data-anchor-id="installation-process">Installation process</h3>
+<h3 class="anchored" data-anchor-id="installation-process"><i class="fa-solid fa-gears"></i> Installation process</h3>
 <p>To use the executable, copy and paste it to your desired location. After that, all you need is the file path.</p>
 </section>
 <section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<h3 class="anchored" data-anchor-id="usage"><i class="fa-solid fa-chalkboard-user"></i> Usage</h3>
 <p>3-PG is a command line program, and its behaviour is controlled by several command line options, specified in unix style. The C++ implementation of 3-PG is heavily influenced by the original Excel version, enabling users to easily switch between either implementation (more on the Excel version can be found in <a href="./Section_5.html">Section 5</a>).</p>
 <p>The usage of the program is:</p>
 <pre><code>3PG -d default_file -s site_file</code></pre>
 <p>3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the ‘default’ and the ‘site’ parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of <a href="./Section_7.html">Section 7</a>.</p>
 </section>
 <section id="parameter-files" class="level3">
-<h3 class="anchored" data-anchor-id="parameter-files">Parameter Files</h3>
+<h3 class="anchored" data-anchor-id="parameter-files"><i class="fa-solid fa-scroll"></i> Parameter Files</h3>
 <p>The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space seperating the parameter name and its value.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

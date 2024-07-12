@@ -1,0 +1,11 @@
+---
+title: "Technical Details"
+---
+
+### GitHub {{< fa brands github title="The GitHub octocat logo" >}}
+
+Underlying code for the executable can be found at this github repository: **include link**
+
+### <i class="fa-solid fa-gears"></i> Additional Technical Information
+
+Anything else to add?

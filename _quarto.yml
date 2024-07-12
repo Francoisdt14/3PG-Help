@@ -19,6 +19,7 @@ website:
       - Section_5.qmd
       - Section_6.qmd
       - Section_7.qmd
+      - Section_8.qmd
       
   page-footer:
     left: <a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a>
@@ -30,6 +31,7 @@ format:
     theme: flatly
     css: /styles.css
     toc: true
+    fontawesome: true
 
 editor: visual
 
