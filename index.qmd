@@ -16,9 +16,14 @@ author:
     affiliation: UBC
 ---
 
+::: main-content
 ## Welcome!
 
-You have made it to the home page of the 3-PG User Guide, created by the [Integrated Remote Sensing Studio](https://irsslab.forestry.ubc.ca/) in collaboration with BP. This website includes some background on 3-PG, as well as how to use the 3-PG executable. Topics can be explored by using the panel on the left hand side of the page, or clicking the headings directly. Click the 3-PG logo at any time to return to the home page.
+Welcome to the home page of the 3-PG User Guide, created by the [Integrated Remote Sensing Studio](https://irsslab.forestry.ubc.ca/) in collaboration with BP. This website includes some background on 3-PG, as well as how to use the 3-PG executable. Topics can be explored by using the panel on the left hand side of the page, or clicking the headings directly. Click the 3-PG logo at any time to return to the home page.
+
+::: {style="text-align: center;"}
+<img src="media/logos_comb.png" alt="Logos" style="width: 300px;"/>
+:::
 
 #### 1. [Background](./Section_1.qmd)
 
@@ -30,7 +35,7 @@ You have made it to the home page of the 3-PG User Guide, created by the [Integr
 
 -   What do we need for 3-PG to work
 
-#### 3. [The C++ Executable](./Section_3.qmd) 
+#### 3. [The C++ Executable](./Section_3.qmd)
 
 -   A step-by-step guide to using the 3-PG executable
 
@@ -45,3 +50,22 @@ You have made it to the home page of the 3-PG User Guide, created by the [Integr
 #### 7. [Additional Resources](./Section_7.qmd)
 
 #### 8. [Technical Details](./Section_8.qmd)
+:::
+
+::: funding-acknowledgment
+This project was funded by BP - please contact [Aoife Toomey](aoife.toomey@uk.bp.com) for more information.
+:::
+
+```{=html}
+<style>
+.main-content {
+  margin-bottom: 50px; /* Adjust this value to increase or decrease space */
+}
+
+.funding-acknowledgment {
+  margin-top: 20px; /* Adjust this value to increase or decrease space */
+  font-style: italic;
+  color: #666; /* Optional: changes the text color */
+}
+</style>
+```

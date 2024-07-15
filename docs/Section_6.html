@@ -169,8 +169,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#links-to-papers-with-some-common-species" id="toc-links-to-papers-with-some-common-species" class="nav-link active" data-scroll-target="#links-to-papers-with-some-common-species">Links to papers with some common species?</a></li>
-  <li><a href="#parameterizing-your-own-species" id="toc-parameterizing-your-own-species" class="nav-link" data-scroll-target="#parameterizing-your-own-species">Parameterizing Your Own Species</a></li>
+  <li><a href="#parameterizing-your-own-species" id="toc-parameterizing-your-own-species" class="nav-link active" data-scroll-target="#parameterizing-your-own-species">Parameterizing Your Own Species</a></li>
   </ul>
 </nav>
     </div>
@@ -196,22 +195,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="links-to-papers-with-some-common-species" class="level3">
-<h3 class="anchored" data-anchor-id="links-to-papers-with-some-common-species">Links to papers with some common species?</h3>
-<ul>
-<li>Link 1</li>
-<li>Link 2 etc.</li>
-</ul>
-</section>
+<p>A considerable number of species have been parameterized for 3-PG. The UBC 3-PG website contains a <a href="3pg.forestry.ubc.ca/3pg-studies/">link</a> to many papers that have used 3-PG, and includes a note on which species have been studied. For example, the paramerization for ponderosa pine (<em>Pinus ponderosa</em>&nbsp;Doug. ex Loud.) can be found <a href="https://www.sciencedirect.com/science/article/pii/S030438000400434X">here</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, while the paramterizations for major central European species can be found <a href="https://link.springer.com/article/10.1007/s10342-021-01370-3">here</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Additionally, the authors of the r3PG package (more <a href="./section_5.qmd">here</a>) put together a database with a list of species that have been parameterized; their list can be found by using the function: <code>View(i_parameters_lit)</code>.</p>
 <section id="parameterizing-your-own-species" class="level3">
 <h3 class="anchored" data-anchor-id="parameterizing-your-own-species">Parameterizing Your Own Species</h3>
-<ul>
-<li>Often helpful to use Excel implementation</li>
-<li>Guides to species parameterization?
-<ul>
-<li>e.g.&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S0378112701005862">Parameterisation of 3-PG for plantation grown Eucalyptus globulus</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-</ul></li>
-</ul>
+<p>In some instances, a species parameterization may not exist. In this case, it is necessary to parameterize your own species. In general, parameter values should be assigned by direct measurement, or by analogy with another species (i.e.&nbsp;the two species share physiological traits). If this is not possible, parameters need to be estimated by adjusting their values to optimize the fit of 3-PG outputs to observed data. It is important to base the estimates on observations of as many distinct variables as possible, with covering a a wide range of conditions. A thorough overview of how to address novel species parameterizations is provided <a href="https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf">here</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, by Peter Sands. Finally, some additional tips for species parameterization can be found: <a href="https://www.sciencedirect.com/science/article/pii/S0378112701005862">here</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 
 
 </section>
@@ -220,7 +207,10 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Sands, P. J., &amp; Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>163</em>(1-3), 273-292.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Coops, N. C., Waring, R. H., &amp; Law, B. E. (2005). Assessing the past and future distribution and productivity of ponderosa pine in the Pacific Northwest using a process model, 3-PG.&nbsp;<em>Ecological Modelling</em>,&nbsp;<em>183</em>(1), 107-124.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Forrester, D.I., Hobi, M.L., Mathys, A.S. <em>et al.</em> Calibration of the process-based model 3-PG for major central European tree species. <em>Eur J Forest Res</em> <strong>140</strong>, 847–868 (2021). https://doi.org/10.1007/s10342-021-01370-3<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Sands, P. (2004). <em>Adaptation of 3-PG to novel species: Guidelines for data collection and parameter assignment</em> (Technical Report 141; Project B4: Modelling Productivity and Wood Quality). Cooperative Research Centre for Sustainable Production Forestry, CSIRO Forestry and Forest Products. https://3pg.forestry.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Sands, P. J., &amp; Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>163</em>(1-3), 273-292.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -636,13 +626,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
-</div>   
+      &nbsp;
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></p>
+<p><img src="media/logos_footer.png" alt="Logo" style="height:50px;"></p>
 </div>
   </div>
 </footer>

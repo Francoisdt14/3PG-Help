@@ -9,3 +9,22 @@
   max-width: 150px; /* Adjust the value as needed */
   height: auto;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Adjust color as needed */
+  padding: 10px 0;
+  text-align: center;
+}

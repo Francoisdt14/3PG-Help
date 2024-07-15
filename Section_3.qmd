@@ -26,7 +26,7 @@ The usage of the program is:
 
 ### 📄 Parameter Files
 
-The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space seperating the parameter name and its value.
+The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space separating the parameter name and its value.
 
 ::: callout-note
 Comments are allowed in the parameter file. Comments can appear almost anywhere, must begin with two forward slash characters '//', and end at the end of the line.
@@ -42,7 +42,7 @@ Latitude (Latitude)
 Soil fertility (Fertility rating)
 Soil texture (Soil class)
 Maximum available soil water (Maximum ASW)
-Minimum available soil water (Minimum ASW)
+Minimum available soil water (Minimum ASW, usually set to 0)
 Start age of the trees (Start age)
 End year of the simulation (End year)
 Start month of the simulation (Start month)
@@ -61,7 +61,7 @@ Monthly mean short-wave radiation (Solar radtn)
 Frost days per month (Frost)
 ```
 
-Parameters that describe site conditions can be prodided as constants, or rasters.
+Parameters that describe site conditions can be provided as constants, or rasters.
 
 For example:
 
@@ -83,7 +83,7 @@ Climate parameters are formatted slightly differently. While they can still be p
 "frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0
 ```
 
-sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.
+Sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.
 
 The second format for series parameters allows for climate values to be associated with particular years, and for more than one year of input. In this format the keyword must be on a line by itself, followed lines containing a year, followed by 12 values. The series must be terminated by a blank line. For example:
 
@@ -93,7 +93,7 @@ The second format for series parameters allows for climate values to be associat
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0
 ```
 
-This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
+Tthis gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
 ::: callout-important
 Make sure to check the formatting of your parameter files! Any misspellings or errant commas can lead to 3-PG failing.
@@ -118,7 +118,13 @@ In the example above, if we assume that the "year planted" parameter has the val
 
 The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.
 
-Finally, the parameters "Model mode" and "Output directory" are required, and should appear at the top of the site parameter file. "Model mode" can be given as '3PG' for standard usage, and '3PGS' for satellite mode. Output directory" gives the path to a directory in which output rasters will be written. For example:
+**Satellite Mode**
+
+Satellite mode allows users to provide NDVI estimates from remotely sensed data. In this mode, supplied values of NDVI are used to estimate fPAR at each monthly timestep, rather than estimating LAI from foliage allocation. Satellite mode requires the following three parameters: NDVI_AVH, NDVI_FPAR_int and NDVI_FPAR_const. NDVI_AVH is a list of NDVI values, while NDVI_FPAR_int and NDVI_FPAR_const are the intercept and constant respectively, of a linear equation predicting fPAR as a function of NDVI.
+
+**Other Requirements**
+
+The parameters "Model mode" and "Output directory" are required, and usually appear at the top of the site parameter file. "Model mode" can be given as '3PG' for standard usage, and '3PGS' for satellite mode (see above). Output directory" gives the path to a directory in which output rasters will be written. For example:
 
 ```         
 "Model mode" 3PG

@@ -8,17 +8,13 @@ title: "3-PG Outputs"
 
 ### 🗺️ Outputs
 
-The parameter "output directory" gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in [Additional Resources and Examples](/Section_7.qmd). In standard mode
-
-**Check this** ... 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt. -\> **satellite mode has not been disabled, just need to be clear in the instructions on usage**
-
-Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:
+The parameter "output directory" gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in the [Additional Resources and Examples](/Section_7.qmd) section. Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:
 
 ```         
 "Weight of stems" wstem.tif 1975 1 month 1
 ```
 
-will cause the variable "weight of stems" to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the "weight of stems" variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword "monthly":
+Will cause the variable "weight of stems" to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the "weight of stems" variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword "monthly":
 
 ```         
 "Weight of stems" wstem.tif 1975 1 monthly
@@ -50,9 +46,13 @@ short name     long name
 "LAI"          "Leaf Area Index"
 ```
 
-**Check this how much of this has changed - currently satellite mode enabled**
+::: callout-note
+When providing output variables, both the short name and long name are recognized in the parameter files.
+:::
 
-The full list of output variables available in 3PGS and spatial modes is:
+**Double check this - currently satellite mode enabled**
+
+In addition, the following variables can be output when using 3PGS mode:
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 short name     long name

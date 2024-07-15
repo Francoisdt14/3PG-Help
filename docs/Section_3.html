@@ -216,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="parameter-files" class="level3">
 <h3 class="anchored" data-anchor-id="parameter-files">📄 Parameter Files</h3>
-<p>The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space seperating the parameter name and its value.</p>
+<p>The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space separating the parameter name and its value.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -237,7 +237,7 @@ Latitude (Latitude)
 Soil fertility (Fertility rating)
 Soil texture (Soil class)
 Maximum available soil water (Maximum ASW)
-Minimum available soil water (Minimum ASW)
+Minimum available soil water (Minimum ASW, usually set to 0)
 Start age of the trees (Start age)
 End year of the simulation (End year)
 Start month of the simulation (Start month)
@@ -254,7 +254,7 @@ Monthly means of minimum daily temperature (Tmax)
 Monthly mean rainfall (Rain)
 Monthly mean short-wave radiation (Solar radtn)
 Frost days per month (Frost)</code></pre>
-<p>Parameters that describe site conditions can be prodided as constants, or rasters.</p>
+<p>Parameters that describe site conditions can be provided as constants, or rasters.</p>
 <p>For example:</p>
 <pre><code>"Fertility rating",  0.7</code></pre>
 <p>or</p>
@@ -262,12 +262,12 @@ Frost days per month (Frost)</code></pre>
 <p>In the first case, fertility would be set to a constant value of 0.7. In the second case, a raster is used to set the fertility value across an area of interest.</p>
 <p>Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by white space, followed by 12 values. For example, this line:</p>
 <pre><code>"frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0</code></pre>
-<p>sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.</p>
+<p>Sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.</p>
 <p>The second format for series parameters allows for climate values to be associated with particular years, and for more than one year of input. In this format the keyword must be on a line by itself, followed lines containing a year, followed by 12 values. The series must be terminated by a blank line. For example:</p>
 <pre><code>"Rain" 
 1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0</code></pre>
-<p>This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
+<p>Tthis gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -291,7 +291,10 @@ Important
     2000  0</code></pre>
 <p>In the example above, if we assume that the “year planted” parameter has the value 1989, then for every year up to, but not including, 1994, 8 ML/year of irrigation is applied, over the whole run area. For the years 1994, 1995 and 1996, each cell will receive the irrigation specified in the grid file irr1997.tif. If a cell contains the NODATA value, the effect of the previous entry in the management table persists. For the years 1998 and on, zero irrigation is applied throughout the whole run area. This carry over of the last entry of the management table duplicates the working of the Excel version.</p>
 <p>The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.</p>
-<p>Finally, the parameters “Model mode” and “Output directory” are required, and should appear at the top of the site parameter file. “Model mode” can be given as ‘3PG’ for standard usage, and ‘3PGS’ for satellite mode. Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
+<p><strong>Satellite Mode</strong></p>
+<p>Satellite mode allows users to provide NDVI estimates from remotely sensed data. In this mode, supplied values of NDVI are used to estimate fPAR at each monthly timestep, rather than estimating LAI from foliage allocation. Satellite mode requires the following three parameters: NDVI_AVH, NDVI_FPAR_int and NDVI_FPAR_const. NDVI_AVH is a list of NDVI values, while NDVI_FPAR_int and NDVI_FPAR_const are the intercept and constant respectively, of a linear equation predicting fPAR as a function of NDVI.</p>
+<p><strong>Other Requirements</strong></p>
+<p>The parameters “Model mode” and “Output directory” are required, and usually appear at the top of the site parameter file. “Model mode” can be given as ‘3PG’ for standard usage, and ‘3PGS’ for satellite mode (see above). Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
 <pre><code>"Model mode" 3PG
 "Output directory" D:\3-PGS_MODEL</code></pre>
 <p>Would use the standard mode of 3PG and write all output files to the “D:\3-PGS_MODEL” folder.</p>
@@ -728,13 +731,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
-</div>   
+      &nbsp;
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></p>
+<p><img src="media/logos_footer.png" alt="Logo" style="height:50px;"></p>
 </div>
   </div>
 </footer>

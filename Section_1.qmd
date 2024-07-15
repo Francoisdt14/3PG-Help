@@ -4,9 +4,11 @@ title: "3-PG Background"
 
 ###  What is 3-PG?
 
-3-PG (Physiological Principles Predicting Growth) is a process-based model designed to simulate forest growth and productivity. Developed by Landsberg and Waring in 1997[^1], it represents a significant advancement in forest modeling by bridging the gap between conventional empirical models and complex process-based models. 3-PG is a generic stand model that runs on a monthly time step using climate data, and can be parameterized for individual species. 3-PG consists of five submodules: assimilation of carbohydrates, the distribution of biomass between foliage, roots and stems, the determination of stem number, soil water balance, and conversion of biomass into variables of interest to forest managers.
+3-PG (Physiological Principles Predicting Growth) is a process-based model designed to simulate forest growth and productivity. It was developed by Landsberg and Waring in 1997[^1], and then modified and used in a spatial version by Coops et al., 1998[^2]. The model represents a significant advancement in forest modeling by bridging the gap between conventional empirical models and complex process-based models. 3-PG is a generic stand model that runs on a monthly time step using climate data, and can be parameterized for individual species. 3-PG consists of five submodules: assimilation of carbohydrates, the distribution of biomass between foliage, roots and stems, the determination of stem number, soil water balance, and conversion of biomass into variables of interest to forest managers.
 
 [^1]: Landsberg, J. J., & Waring, R. H. (1997). A generalised model of forest productivity using simplified concepts of radiation-use efficiency, carbon balance and partitioning. *Forest ecology and management*, *95*(3), 209-228.
+
+[^2]: Coops, N. C., Waring, R. H., & Landsberg, J. J. (1998). Assessing forest productivity in Australia and New Zealand using a physiologically-based model driven with averaged monthly weather data and satellite-derived estimates of canopy photosynthetic capacity. *Forest Ecology and Management*, *104*(1-3), 113-127.
 
 **Key features of 3-PG include:**
 
@@ -22,6 +24,7 @@ title: "3-PG Background"
 -   Photosynthetically active radiation (APAR) absorbed by the canopy is determined from total solar radiation, and canopy LAI. Environmental modifiers, based on atmospheric vapour pressure deficit, available soil water, mean air temperature, frost days per month, site nutrition, and stand age are then taken into account, limiting the total gross primary production that can occur. Net primary production (NPP) is a constant fraction of GPP (47%).
 -   Allocation of NPP (biomass) to stems and foliage varies by growing conditions, and depends on average tree size; allocation to foliage declines and that to stems increases as stands age. Allocation of NPP to roots depends on growing conditions (expressed by available soil water, vapour pressure deficit, and site nutrition). The proportion of NPP allocated to roots increases when nutritional status and/or available soil water are low.
 -   An upper limit of stem number is calculated based on the single-tree stem mass of a current stem population. If the current stem mass is greater than the upper limit, the stem population is reduced to a level consistent with this limit.
+-   The soil water balance is the difference between total monthly rainfall plus available soil water stored from the previous month, and transpiration. When the water balance is positive, excess water is considered runoff. In the case of a deficit, it becomes a growth limitation.
 -   Finally, stand characteristics that are of interest to scientists and forests managers such as biomass, stem volume, basal area, and mean stem diameter can be calculated for the entire duration of stand growth.
 
 ### What can we do with it?

@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-is-3-pg" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-3-pg">What is 3-PG?</h3>
-<p>3-PG (Physiological Principles Predicting Growth) is a process-based model designed to simulate forest growth and productivity. Developed by Landsberg and Waring in 1997<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, it represents a significant advancement in forest modeling by bridging the gap between conventional empirical models and complex process-based models. 3-PG is a generic stand model that runs on a monthly time step using climate data, and can be parameterized for individual species. 3-PG consists of five submodules: assimilation of carbohydrates, the distribution of biomass between foliage, roots and stems, the determination of stem number, soil water balance, and conversion of biomass into variables of interest to forest managers.</p>
+<p>3-PG (Physiological Principles Predicting Growth) is a process-based model designed to simulate forest growth and productivity. It was developed by Landsberg and Waring in 1997<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and then modified and used in a spatial version by Coops et al., 1998<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The model represents a significant advancement in forest modeling by bridging the gap between conventional empirical models and complex process-based models. 3-PG is a generic stand model that runs on a monthly time step using climate data, and can be parameterized for individual species. 3-PG consists of five submodules: assimilation of carbohydrates, the distribution of biomass between foliage, roots and stems, the determination of stem number, soil water balance, and conversion of biomass into variables of interest to forest managers.</p>
 <p><strong>Key features of 3-PG include:</strong></p>
 <ul>
 <li>Simplicity: 3-PG uses a small number of parameters that are readily available or easily estimated.</li>
@@ -215,6 +215,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Photosynthetically active radiation (APAR) absorbed by the canopy is determined from total solar radiation, and canopy LAI. Environmental modifiers, based on atmospheric vapour pressure deficit, available soil water, mean air temperature, frost days per month, site nutrition, and stand age are then taken into account, limiting the total gross primary production that can occur. Net primary production (NPP) is a constant fraction of GPP (47%).</li>
 <li>Allocation of NPP (biomass) to stems and foliage varies by growing conditions, and depends on average tree size; allocation to foliage declines and that to stems increases as stands age. Allocation of NPP to roots depends on growing conditions (expressed by available soil water, vapour pressure deficit, and site nutrition). The proportion of NPP allocated to roots increases when nutritional status and/or available soil water are low.</li>
 <li>An upper limit of stem number is calculated based on the single-tree stem mass of a current stem population. If the current stem mass is greater than the upper limit, the stem population is reduced to a level consistent with this limit.</li>
+<li>The soil water balance is the difference between total monthly rainfall plus available soil water stored from the previous month, and transpiration. When the water balance is positive, excess water is considered runoff. In the case of a deficit, it becomes a growth limitation.</li>
 <li>Finally, stand characteristics that are of interest to scientists and forests managers such as biomass, stem volume, basal area, and mean stem diameter can be calculated for the entire duration of stand growth.</li>
 </ul>
 </section>
@@ -257,6 +258,7 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p>Landsberg, J. J., &amp; Waring, R. H. (1997). A generalised model of forest productivity using simplified concepts of radiation-use efficiency, carbon balance and partitioning.&nbsp;<em>Forest ecology and management</em>,&nbsp;<em>95</em>(3), 209-228.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Coops, N. C., Waring, R. H., &amp; Landsberg, J. J. (1998). Assessing forest productivity in Australia and New Zealand using a physiologically-based model driven with averaged monthly weather data and satellite-derived estimates of canopy photosynthetic capacity.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>104</em>(1-3), 113-127.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -672,13 +674,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
-</div>   
+      &nbsp;
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></p>
+<p><img src="media/logos_footer.png" alt="Logo" style="height:50px;"></p>
 </div>
   </div>
 </footer>

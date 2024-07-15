@@ -2,15 +2,16 @@
 title: "Species Parameterizations"
 ---
 
-### Links to papers with some common species? 
+A considerable number of species have been parameterized for 3-PG. The UBC 3-PG website contains a [link](3pg.forestry.ubc.ca/3pg-studies/) to many papers that have used 3-PG, and includes a note on which species have been studied. For example, the paramerization for ponderosa pine (*Pinus ponderosa* Doug. ex Loud.) can be found [here](https://www.sciencedirect.com/science/article/pii/S030438000400434X)[^1], while the paramterizations for major central European species can be found [here](https://link.springer.com/article/10.1007/s10342-021-01370-3)[^2]. Additionally, the authors of the r3PG package (more [here](./section_5.qmd)) put together a database with a list of species that have been parameterized; their list can be found by using the function: `View(i_parameters_lit)`.
 
--   Link 1
--   Link 2 etc.
+[^1]: Coops, N. C., Waring, R. H., & Law, B. E. (2005). Assessing the past and future distribution and productivity of ponderosa pine in the Pacific Northwest using a process model, 3-PG. *Ecological Modelling*, *183*(1), 107-124.
+
+[^2]: Forrester, D.I., Hobi, M.L., Mathys, A.S. *et al.* Calibration of the process-based model 3-PG for major central European tree species. *Eur J Forest Res* **140**, 847–868 (2021). https://doi.org/10.1007/s10342-021-01370-3
 
 ### Parameterizing Your Own Species
 
--   Often helpful to use Excel implementation
--   Guides to species parameterization?
-    -   e.g. [Parameterisation of 3-PG for plantation grown Eucalyptus globulus](https://www.sciencedirect.com/science/article/pii/S0378112701005862)[^1]
+In some instances, a species parameterization may not exist. In this case, it is necessary to parameterize your own species. In general, parameter values should be assigned by direct measurement, or by analogy with another species (i.e. the two species share physiological traits). If this is not possible, parameters need to be estimated by adjusting their values to optimize the fit of 3-PG outputs to observed data. It is important to base the estimates on observations of as many distinct variables as possible, with covering a a wide range of conditions. A thorough overview of how to address novel species parameterizations is provided [here](https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf)[^3], by Peter Sands. Finally, some additional tips for species parameterization can be found: [here](https://www.sciencedirect.com/science/article/pii/S0378112701005862)[^4].
 
-[^1]: Sands, P. J., & Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus. *Forest Ecology and Management*, *163*(1-3), 273-292.
+[^3]: Sands, P. (2004). *Adaptation of 3-PG to novel species: Guidelines for data collection and parameter assignment* (Technical Report 141; Project B4: Modelling Productivity and Wood Quality). Cooperative Research Centre for Sustainable Production Forestry, CSIRO Forestry and Forest Products. https://3pg.forestry.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf
+
+[^4]: Sands, P. J., & Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus. *Forest Ecology and Management*, *163*(1-3), 273-292.

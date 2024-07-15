@@ -30,7 +30,7 @@ Site factors required include latitude, soil water information, and soil descrip
 Latitude (site or pixel latitude)
 Maximum available soil water (mm)
 Minimum available soil water (mm)
-Soil class (1-4, ? for default)
+Soil class (1-sandy, 2-sandy loam, 3- clay loam, 4-clay)
 Soil fertility rating (0-1)
 ```
 
@@ -116,4 +116,4 @@ Parameters characterizing the species of interest is required for 3-PG. These pa
 "Conversion of solar radiation to PAR" 
 ```
 
-Additional species parameterizations can be found **WHERE**
+More on species parameters can be found in the [Species Paramerizations section](./Section_6.qmd).

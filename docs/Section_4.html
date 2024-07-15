@@ -202,11 +202,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="outputs" class="level3">
 <h3 class="anchored" data-anchor-id="outputs">🗺️ Outputs</h3>
-<p>The parameter “output directory” gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in <a href="./Section_7.html">Additional Resources and Examples</a>. In standard mode</p>
-<p><strong>Check this</strong> … 9 variables are available for output, and are listed in the example file example2.txt. In satellite mode only 4 variables are available for output, and are listed in the example file example3.txt. -&gt; <strong>satellite mode has not been disabled, just need to be clear in the instructions on usage</strong></p>
-<p>Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:</p>
+<p>The parameter “output directory” gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in the <a href="./Section_7.html">Additional Resources and Examples</a> section. Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:</p>
 <pre><code>"Weight of stems" wstem.tif 1975 1 month 1</code></pre>
-<p>will cause the variable “weight of stems” to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the “weight of stems” variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword “monthly”:</p>
+<p>Will cause the variable “weight of stems” to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the “weight of stems” variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword “monthly”:</p>
 <pre><code>"Weight of stems" wstem.tif 1975 1 monthly</code></pre>
 <p>Will produce grids every month from 1975 until the end of the run.</p>
 <p>The full list of output variables available in 3-PG is:</p>
@@ -229,8 +227,21 @@ ul.task-list li input[type="checkbox"] {
 "LAIx"       "Maximum Leaf Area Index"
 "ageLAIx"    "Age at Maximum Leaf Area"
 "LAI"          "Leaf Area Index"</code></pre>
-<p><strong>Check this how much of this has changed - currently satellite mode enabled</strong></p>
-<p>The full list of output variables available in 3PGS and spatial modes is:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When providing output variables, both the short name and long name are recognized in the parameter files.</p>
+</div>
+</div>
+<p><strong>Double check this - currently satellite mode enabled</strong></p>
+<p>In addition, the following variables can be output when using 3PGS mode:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>short name     long name
 --------------------------------------
 "NPP"          "Net Primary Production (tDM/ha)"
@@ -655,13 +666,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://irsslab.forestry.ubc.ca/" target="_blank"><img src="media/IRSS_logo_colour.png" alt="IRSS Logo" style="height:50px;"></a></p>
-</div>   
+      &nbsp;
+    </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><img src="media/BP_logo.png" alt="Logo" style="height:50px;"></p>
+<p><img src="media/logos_footer.png" alt="Logo" style="height:50px;"></p>
 </div>
   </div>
 </footer>
