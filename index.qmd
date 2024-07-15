@@ -53,7 +53,7 @@ Welcome to the home page of the 3-PG User Guide, created by the [Integrated Remo
 :::
 
 ::: funding-acknowledgment
-This project was funded by BP - please contact [Aoife Toomey](aoife.toomey@uk.bp.com) for more information.
+This project was funded by BP - please contact [Aoife Toomey](mailto:aoife.toomey@uk.bp.com) for more information.
 :::
 
 ```{=html}
