@@ -50,7 +50,7 @@ short name     long name
 When providing output variables, both the short name and long name are recognized in the parameter files.
 :::
 
-**Double check this - currently satellite mode enabled**
+**Double check this - currently satellite mode enabled, so the below outputs should be possible**
 
 In addition, the following variables can be output when using 3PGS mode:
 

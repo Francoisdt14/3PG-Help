@@ -10,7 +10,14 @@ A considerable number of species have been parameterized for 3-PG. The UBC 3-PG 
 
 ### Parameterizing Your Own Species
 
-In some instances, a species parameterization may not exist. In this case, it is necessary to parameterize your own species. In general, parameter values should be assigned by direct measurement, or by analogy with another species (i.e. the two species share physiological traits). If this is not possible, parameters need to be estimated by adjusting their values to optimize the fit of 3-PG outputs to observed data. It is important to base the estimates on observations of as many distinct variables as possible, with covering a a wide range of conditions. A thorough overview of how to address novel species parameterizations is provided [here](https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf)[^3], by Peter Sands. Finally, some additional tips for species parameterization can be found [here](https://www.sciencedirect.com/science/article/pii/S0378112701005862)[^4].
+In some instances, a species parameterization may not exist. In this case, it is necessary to parameterize your own species:
+
+-   If possible, parameter values should be assigned by direct measurement
+-   If this is not possible, values should be assigned by analogy with another species (i.e. the two species share physiological traits)
+    -   In this case, it is particularly useful to find previous parameterizations for similar species
+-   Parameters can be estimated by adjusting their values to optimize the fit of 3-PG outputs to observed field data
+    -   It is important to base the estimates on observations of as many distinct variables as possible, with covering a a wide range of conditions
+-   A thorough overview of how to address novel species parameterizations is provided [here](https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf)[^3], by Peter Sands, while additional tips for species parameterization can be found [here](https://www.sciencedirect.com/science/article/pii/S0378112701005862)[^4]
 
 [^3]: Sands, P. (2004). *Adaptation of 3-PG to novel species: Guidelines for data collection and parameter assignment* (Technical Report 141; Project B4: Modelling Productivity and Wood Quality). Cooperative Research Centre for Sustainable Production Forestry, CSIRO Forestry and Forest Products. https://3pg.forestry.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf
 

@@ -96,7 +96,7 @@ The second format for series parameters allows for climate values to be associat
 Tthis gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
 ::: callout-important
-Make sure to check the formatting of your parameter files! Any misspellings or errant commas can lead to 3-PG failing.
+Make sure to check the formatting of your parameter files! While key words are not case sensitive, any misspellings, incorrect paths, or errant commas can lead to 3-PG failing.
 :::
 
 **Management Tables**
@@ -118,20 +118,16 @@ In the example above, if we assume that the "year planted" parameter has the val
 
 The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.
 
-**Satellite Mode**
-
-Satellite mode allows users to provide NDVI estimates from remotely sensed data. In this mode, supplied values of NDVI are used to estimate fPAR at each monthly timestep, rather than estimating LAI from foliage allocation. Satellite mode requires the following three parameters: NDVI_AVH, NDVI_FPAR_int and NDVI_FPAR_const. NDVI_AVH is a list of NDVI values, while NDVI_FPAR_int and NDVI_FPAR_const are the intercept and constant respectively, of a linear equation predicting fPAR as a function of NDVI.
-
 **Other Requirements**
 
-The parameters "Model mode" and "Output directory" are required, and usually appear at the top of the site parameter file. "Model mode" can be given as '3PG' for standard usage, and '3PGS' for satellite mode (see above). Output directory" gives the path to a directory in which output rasters will be written. For example:
+The parameters "Model mode" and "Output directory" are required, and usually appear at the top of the site parameter file. "Model mode" should be given as '3PG', while "Output directory" gives the path to a directory in which output rasters will be written. For example:
 
 ```         
 "Model mode" 3PG
 "Output directory" D:\3-PGS_MODEL
 ```
 
-Would use the standard mode of 3PG and write all output files to the "D:\\3-PGS_MODEL" folder.
+Uses 3PG and write all output files to the "D:\\3-PGS_MODEL" folder.
 
 **Species Parameter File**
 
