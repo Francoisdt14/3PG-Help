@@ -29,7 +29,6 @@ Site factors required include latitude, soil water information, and soil descrip
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
 Latitude (site or pixel latitude)
 Maximum available soil water (mm)
-Minimum available soil water (mm)
 Soil class (1-sandy, 2-sandy loam, 3- clay loam, 4-clay)
 Soil fertility rating (0-1)
 ```

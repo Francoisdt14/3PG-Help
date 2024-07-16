@@ -19,14 +19,14 @@ To use the executable, copy and paste it to your desired location. After that, a
 The usage of the program is:
 
 ```         
-3PG -d default_file -s site_file
+'path to 3-PG.exe' -d 'path to site file' -s 'path to site file'
 ```
 
-3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'default' and the 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Additional Resources and Examples](./Section_7.qmd).
+3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'species' (or 'default') and 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Additional Resources and Examples](./Section_7.qmd).
 
 ### 📄 Parameter Files
 
-The format of the parameter file is, in general, one parameter per line, with the parameter name being enclosed in double quotes, and white space separating the parameter name and its value.
+The format of the parameter file is one parameter per line, with the parameter name being enclosed in double quotes, and white space separating the parameter name and its value.
 
 ::: callout-note
 Comments are allowed in the parameter file. Comments can appear almost anywhere, must begin with two forward slash characters '//', and end at the end of the line.
