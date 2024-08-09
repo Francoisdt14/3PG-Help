@@ -22,7 +22,7 @@ author:
 Welcome to the home page of the 3-PG User Guide, created by the [Integrated Remote Sensing Studio](https://irsslab.forestry.ubc.ca/) in collaboration with BP. This website includes some background on 3-PG, as well as how to use the 3-PG executable. Topics can be explored by using the panel on the left hand side of the page, or clicking the headings directly. Click the 3-PG logo at any time to return to the home page.
 
 ::: {style="text-align: center;"}
-<img src="media/logos_comb.png" alt="Logos" style="width: 300px;"/>
+<img src="media/IRSS_logo_colour.png" alt="Logos" style="width: 300px;"/>
 :::
 
 #### 1. [Background](./Section_1.qmd)
