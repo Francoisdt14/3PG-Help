@@ -31,9 +31,10 @@ Latitude (site or pixel latitude)
 Maximum available soil water (mm)
 Soil class (1-sandy, 2-sandy loam, 3- clay loam, 4-clay)
 Soil fertility rating (0-1)
+CO2 (ppm)
 ```
 
-Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. \[**CO2 factor to come!**\].
+Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. A CO2 factor has been added to this version of 3-PG to improve modelling of future climate scenarios.
 
 In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. The full list of site conditions are found below:
 

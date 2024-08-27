@@ -129,4 +129,4 @@ D:/3PG_Example/3PG.exe -d D:/3PG_Example/Species_Generic_Pine.txt -s D:/3PG_Exam
 
 ### 🗺️ Example Outputs
 
-Add example rasters - potentially link example parameter files to output and add a shapefile or coordinates to area where the study took place to be reproducible?
+Add example rasters? - potentially link example parameter files to output and add a shapefile or coordinates to area where the study took place to be reproducible?

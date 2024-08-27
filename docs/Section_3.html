@@ -201,11 +201,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Step-by-step user guide for forest simulation with the C++ executable.</p>
 <section id="system-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="system-requirements">💻 System requirements?</h3>
-<p>The 3-PG executable can be run on Windows (still need to test Mac and/or Linux). And minimum system requirements can be highlighted here, or we can send readers to <a href="./Section_8.html">Technical Details</a>.</p>
+<p>The 3-PG executable can be run on Windows (<strong>still need to test Mac and/or Linux</strong>). The main limitation of 3-PG is the size of the input files - minimum system requirements can be highlighted here, or we can send readers to <a href="./Section_8.html">Technical Details</a>.</p>
 </section>
 <section id="installation-process" class="level3">
 <h3 class="anchored" data-anchor-id="installation-process">⚙️ Installation process</h3>
-<p>To use the executable, copy and paste it to your desired location. After that, all you need is the file path.</p>
+<p>To use the executable, copy and paste it to your desired location. After that, all you need is the file path to paste into the command line.</p>
 </section>
 <section id="usage" class="level3">
 <h3 class="anchored" data-anchor-id="usage">✍️ Usage</h3>
@@ -267,7 +267,7 @@ Frost days per month (Frost)</code></pre>
 <pre><code>"Rain" 
 1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0</code></pre>
-<p>Tthis gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
+<p>This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -295,7 +295,7 @@ Important
 <p>The parameters “Model mode” and “Output directory” are required, and usually appear at the top of the site parameter file. “Model mode” should be given as ‘3PG’, while “Output directory” gives the path to a directory in which output rasters will be written. For example:</p>
 <pre><code>"Model mode" 3PG
 "Output directory" D:\3-PGS_MODEL</code></pre>
-<p>Uses 3PG and write all output files to the “D:\3-PGS_MODEL” folder.</p>
+<p>Tells the executable to run 3PG and write all output files to a folder called “D:\3-PGS_MODEL”.</p>
 <p><strong>Species Parameter File</strong></p>
 <p>As mentioned in the previous section, 3-PG requires a specific species parameter file, which is provided separately to the site parameter file.</p>
 <div class="callout callout-style-default callout-tip callout-titled">

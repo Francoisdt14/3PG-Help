@@ -6,11 +6,11 @@ Step-by-step user guide for forest simulation with the C++ executable.
 
 ### 💻 System requirements?
 
-The 3-PG executable can be run on Windows (still need to test Mac and/or Linux). And minimum system requirements can be highlighted here, or we can send readers to [Technical Details](./Section_8.qmd).
+The 3-PG executable can be run on Windows (**still need to test Mac and/or Linux**). The main limitation of 3-PG is the size of the input files - minimum system requirements can be highlighted here, or we can send readers to [Technical Details](./Section_8.qmd).
 
 ### ⚙️ Installation process
 
-To use the executable, copy and paste it to your desired location. After that, all you need is the file path.
+To use the executable, copy and paste it to your desired location. After that, all you need is the file path to paste into the command line.
 
 ### ✍️ Usage
 
@@ -93,7 +93,7 @@ The second format for series parameters allows for climate values to be associat
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0
 ```
 
-Tthis gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
+This gives constant zero values to precipitation for the first 6 months of 1996, raster values for July to October, constant values for November to January, raster values for February and March, a constant value for April, and raster values for May and June.
 
 ::: callout-important
 Make sure to check the formatting of your parameter files! While key words are not case sensitive, any misspellings, incorrect paths, or errant commas can lead to 3-PG failing.
@@ -127,7 +127,7 @@ The parameters "Model mode" and "Output directory" are required, and usually app
 "Output directory" D:\3-PGS_MODEL
 ```
 
-Uses 3PG and write all output files to the "D:\\3-PGS_MODEL" folder.
+Tells the executable to run 3PG and write all output files to a folder called "D:\\3-PGS_MODEL".
 
 **Species Parameter File**
 

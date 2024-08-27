@@ -44,21 +44,9 @@ short name     long name
 "LAIx"       "Maximum Leaf Area Index"
 "ageLAIx"    "Age at Maximum Leaf Area"
 "LAI"          "Leaf Area Index"
+"NPP"          "Net Primary Production (tDM/ha)"
 ```
 
 ::: callout-note
 When providing output variables, both the short name and long name are recognized in the parameter files.
 :::
-
-**Double check this - currently satellite mode enabled, so the below outputs should be possible**
-
-In addition, the following variables can be output when using 3PGS mode:
-
-``` {.custom-block style="background-color: #f0f0f0; color: black;"}
-short name     long name
---------------------------------------
-"NPP"          "Net Primary Production (tDM/ha)"
-"delWAG"       "change in aboveground biomass (tDM/ha)"
-"cumWabv"      "accumulated aboveground biomass (tDM/ha)"
-"LAI"          "Leaf Area Index"
-```

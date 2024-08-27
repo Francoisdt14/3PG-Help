@@ -10,6 +10,6 @@ The Excel implementation of 3-PG was written in Visual Basic for Applications, a
 
 ### 🧮 r3PG
 
-The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accompanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail [here](https://doi.org/10.1111/2041-210X.13474)[^1]. This package is particularly useful for investigating different site parameters and species due to the ease of visualizing output variables.
+The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accompanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail [here](https://doi.org/10.1111/2041-210X.13474)[^1]. This package is particularly useful for investigating different site parameters and species due to the ease of visualizing output variables, however it is limited over large areas.
 
 [^1]: Trotsiuk, V., Hartig, F., & Forrester, D. I. (2020). r3PG–An r package for simulating forest growth using the 3‐PG process‐based model. *Methods in Ecology and Evolution*, *11*(11), 1470-1475.

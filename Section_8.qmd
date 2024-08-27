@@ -4,8 +4,10 @@ title: "Technical Details"
 
 ### 💻 GitHub
 
-Underlying code for the executable can be found at this github repository: **include link**
+Underlying code for the executable can be found at this github repository: **CURRENTLY PRIVATE**
 
 ### ⚙️ Additional Technical Information
 
 Anything else to add by Vaughan and Joe etc.
+
+This website and repository is currently hosted at: <https://github.com/Francoisdt14/3PG-Help>. This repository and supporting documentation can be cloned and modified to fit BP's needs.

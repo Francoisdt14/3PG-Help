@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A considerable number of species have been parameterized for 3-PG. The UBC 3-PG website contains a <a href="3pg.forestry.ubc.ca/3pg-studies/">link</a> to many papers that have used 3-PG, and includes a note on which species have been studied. For example, the paramerization for ponderosa pine (<em>Pinus ponderosa</em>&nbsp;Doug. ex Loud.) can be found <a href="https://www.sciencedirect.com/science/article/pii/S030438000400434X">here</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, while the paramterizations for major central European species can be found <a href="https://link.springer.com/article/10.1007/s10342-021-01370-3">here</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Additionally, the authors of the r3PG package (more <a href="./section_5.qmd">here</a>) put together a database with a list of species that have been parameterized; their list can be found by using the function: <code>View(i_parameters_lit)</code>.</p>
+<p>A considerable number of species have been parameterized for 3-PG. The UBC 3-PG website contains a <a href="3pg.forestry.ubc.ca/3pg-studies/">link</a> to many papers that have used 3-PG, and includes a note on which species have been studied. For example, the paramerization for ponderosa pine (<em>Pinus ponderosa</em>&nbsp;Doug. ex Loud.) can be found <a href="https://www.sciencedirect.com/science/article/pii/S030438000400434X">here</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, while the paramterizations for major central European species can be found <a href="https://link.springer.com/article/10.1007/s10342-021-01370-3">here</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Additionally, the authors of the r3PG package (more <a href="./section_5.qmd">here</a>) put together a database with a list of species that have been parameterized; their list can be found by using the function: <code>View(i_parameters_lit)</code> in R after loading the package.</p>
 <section id="parameterizing-your-own-species" class="level3">
 <h3 class="anchored" data-anchor-id="parameterizing-your-own-species">Parameterizing Your Own Species</h3>
 <p>In some instances, a species parameterization may not exist. In this case, it is necessary to parameterize your own species:</p>
@@ -204,12 +204,14 @@ ul.task-list li input[type="checkbox"] {
 <li>If this is not possible, values should be assigned by analogy with another species (i.e.&nbsp;the two species share physiological traits)
 <ul>
 <li>In this case, it is particularly useful to find previous parameterizations for similar species</li>
+<li>For example: if one was trying to parameterize black spruce, using parameter values for white spruce from <a href="https://www.sciencedirect.com/science/article/pii/S0304380016000107">here</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> would be a great place to start</li>
 </ul></li>
 <li>Parameters can be estimated by adjusting their values to optimize the fit of 3-PG outputs to observed field data
 <ul>
 <li>It is important to base the estimates on observations of as many distinct variables as possible, with covering a a wide range of conditions</li>
+<li>For example: using plot data from trials with a known location and planting date with regular DBH measurements would be an excellent resource for tuning parameterizations</li>
 </ul></li>
-<li>A thorough overview of how to address novel species parameterizations is provided <a href="https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf">here</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, by Peter Sands, while additional tips for species parameterization can be found <a href="https://www.sciencedirect.com/science/article/pii/S0378112701005862">here</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li>A thorough overview of how to address novel species parameterizations is provided <a href="https://3pg.sites.olt.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf">here</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, by Peter Sands, while additional tips for species parameterization can be found <a href="https://www.sciencedirect.com/science/article/pii/S0378112701005862">here</a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></li>
 </ul>
 
 
@@ -221,8 +223,9 @@ ul.task-list li input[type="checkbox"] {
 <ol>
 <li id="fn1"><p>Coops, N. C., Waring, R. H., &amp; Law, B. E. (2005). Assessing the past and future distribution and productivity of ponderosa pine in the Pacific Northwest using a process model, 3-PG.&nbsp;<em>Ecological Modelling</em>,&nbsp;<em>183</em>(1), 107-124.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Forrester, D.I., Hobi, M.L., Mathys, A.S. <em>et al.</em> Calibration of the process-based model 3-PG for major central European tree species. <em>Eur J Forest Res</em> <strong>140</strong>, 847–868 (2021). https://doi.org/10.1007/s10342-021-01370-3<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Sands, P. (2004). <em>Adaptation of 3-PG to novel species: Guidelines for data collection and parameter assignment</em> (Technical Report 141; Project B4: Modelling Productivity and Wood Quality). Cooperative Research Centre for Sustainable Production Forestry, CSIRO Forestry and Forest Products. https://3pg.forestry.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Sands, P. J., &amp; Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>163</em>(1-3), 273-292.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Amichev, B. Y., Bentham, M. J., Kurz, W. A., Laroque, C. P., Kulshreshtha, S., Piwowar, J. M., &amp; Van Rees, K. C. (2016). Carbon sequestration by white spruce shelterbelts in Saskatchewan, Canada: 3PG and CBM-CFS3 model simulations.&nbsp;<em>Ecological Modelling</em>,&nbsp;<em>325</em>, 35-46.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Sands, P. (2004). <em>Adaptation of 3-PG to novel species: Guidelines for data collection and parameter assignment</em> (Technical Report 141; Project B4: Modelling Productivity and Wood Quality). Cooperative Research Centre for Sustainable Production Forestry, CSIRO Forestry and Forest Products. https://3pg.forestry.ubc.ca/files/2014/04/3-PG-guidelines.TR141.pdf<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Sands, P. J., &amp; Landsberg, J. J. (2002). Parameterisation of 3-PG for plantation grown Eucalyptus globulus.&nbsp;<em>Forest Ecology and Management</em>,&nbsp;<em>163</em>(1-3), 273-292.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
