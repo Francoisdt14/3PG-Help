@@ -145,19 +145,5 @@
     "crumbs": [
       "Additional Resources and Examples"
     ]
-  },
-  {
-    "objectID": "docs/section_5.html",
-    "href": "docs/section_5.html",
-    "title": "Other Implementations",
-    "section": "",
-    "text": "Several other versions of the 3-PG model have been developed over time. Below are some examples:"
-  },
-  {
-    "objectID": "docs/section_5.html#footnotes",
-    "href": "docs/section_5.html#footnotes",
-    "title": "Other Implementations",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nTrotsiuk, V., Hartig, F., & Forrester, D. I. (2020). r3PG–An r package for simulating forest growth using the 3‐PG process‐based model. Methods in Ecology and Evolution, 11(11), 1470-1475.↩︎"
   }
 ]
