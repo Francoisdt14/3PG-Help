@@ -11,7 +11,7 @@ title: "3-PG Outputs"
 The parameter "output directory" gives a path to a directory in which output raster files will be written. The output variables are selected and named as demonstrated in the example site file in the [Additional Resources and Examples](/Section_7.qmd) section. Output variables are written at the end of the model run, although intermediate values can also be written. This is done by placing a start year and recurrence interval after the output grid parameter. For example:
 
 ```         
-"Weight of stems" wstem.tif 1975 1 month 1
+"Weight of stems", wstem.tif 1975 1 month 1
 ```
 
 Will cause the variable "weight of stems" to be written yearly on the first month of every year from 1975. The optional start year and interval will cause intermediate values of the "weight of stems" variable to be saved to raster files called wstem197501.tif, wstem198001.tif, etc. Using the keyword "monthly":

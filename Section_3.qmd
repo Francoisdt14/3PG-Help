@@ -19,7 +19,7 @@ To use the executable, copy and paste it to your desired location. After that, a
 The usage of the program is:
 
 ```         
-'path to 3-PG.exe' -d 'path to site file' -s 'path to site file'
+'path to 3-PG.exe' -d 'path to species file' -s 'path to site file'
 ```
 
 3-PG reads input parameters from two text files. The parameters are named to match the parameter names used in the Excel version. While the two parameter files are referred to as the 'species' (or 'default') and 'site' parameter files, there is virtually no difference in the possible content of the files. Two files are allowed simply as a convenience, and to be similar to the structure of the Excel version. Example parameter files are provided as part of [Additional Resources and Examples](./Section_7.qmd).
@@ -59,6 +59,7 @@ Monthly means of minimum daily temperature (Tmax)
 Monthly mean rainfall (Rain)
 Monthly mean short-wave radiation (Solar radtn)
 Frost days per month (Frost)
+CO2 concentration for simulation run (ppm)
 ```
 
 Parameters that describe site conditions can be provided as constants, or rasters.
@@ -77,10 +78,14 @@ or
 
 In the first case, fertility would be set to a constant value of 0.7. In the second case, a raster is used to set the fertility value across an area of interest.
 
+::: callout-note
+Note the comma after the key word!
+:::
+
 Climate parameters are formatted slightly differently. While they can still be provided as a constant or as a raster, one value or raster needs to be provided per month. These values can be regarded as being for an average year. In model runs of more than 1 year these values will be used repeatedly. In this format a series parameter takes the form of a climate keyword, followed by white space, followed by 12 values. For example, this line:
 
 ```         
-"frost days" fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0
+"frost days", fr01.tif fr02.tif 1 0 0 0 0 0 0 0 0 0
 ```
 
 Sets the value of frost days to be zero for all months of the year, except January, February, and March. In January and February, the value of frost days will be obtained from a raster, which allows the values of frost days to vary spatially for those two months.
@@ -88,7 +93,7 @@ Sets the value of frost days to be zero for all months of the year, except Janua
 The second format for series parameters allows for climate values to be associated with particular years, and for more than one year of input. In this format the keyword must be on a line by itself, followed lines containing a year, followed by 12 values. The series must be terminated by a blank line. For example:
 
 ```         
-"Rain" 
+"Rain", 
 1996 0 0 0 0 0 0 ppt9607.tif ppt9608.tif ppt9609.tif ppt9610.tif 50 50 
 1997 75 ppt9702.tif ppt9703.tif 150 ppt9705.tif ppt9706.tif 0 0 0 0 0 0
 ```
@@ -108,7 +113,7 @@ Management tables in the C++ version of 3-PG are completely analagous to those i
 Management tables are indicated in the parameter file by one of the three keyword phrases: "Management: fertility", "Management: Irrigation", or "Management: MinASW". The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
-  "Management: irrigation"
+  "Management: irrigation",
     1994  8
     1997  irr1997.tif
     2000  0
@@ -123,8 +128,8 @@ The irrigation management variable can only be provided with a management table.
 The parameters "Model mode" and "Output directory" are required, and usually appear at the top of the site parameter file. "Model mode" should be given as '3PG', while "Output directory" gives the path to a directory in which output rasters will be written. For example:
 
 ```         
-"Model mode" 3PG
-"Output directory" D:\3-PGS_MODEL
+"Model mode", 3PG
+"Output directory", D:\3-PGS_MODEL
 ```
 
 Tells the executable to run 3PG and write all output files to a folder called "D:\\3-PGS_MODEL".

@@ -10,4 +10,4 @@ Underlying code for the executable can be found at this github repository: **CUR
 
 Anything else to add by Vaughan and Joe etc.
 
-This website and repository is currently hosted at: <https://github.com/Francoisdt14/3PG-Help>. This repository and supporting documentation can be cloned and modified to fit BP's needs.
+This website and repository is currently hosted at: <https://github.com/Francoisdt14/3PG-Help>. This repository and supporting documentation can be cloned and modified to fit bp's needs.
