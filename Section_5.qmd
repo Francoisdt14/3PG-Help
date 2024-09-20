@@ -8,6 +8,10 @@ Several other versions of the 3-PG model have been developed over time. Below ar
 
 The Excel implementation of 3-PG was written in Visual Basic for Applications, and works as an add-in for an Excel document. It's primary purpose was to facilitate the use of 3-PG in a research setting, as the flexibility provided allows for testing species adaptation to novel climates, and parameterizing new species. The Excel model can be downloaded [here](https://3pg.forestry.ubc.ca/software/), and an extensive user guide can be found [here](https://3pg.forestry.ubc.ca/files/2014/04/3PGpjs_UserManual.pdf). In addition to the original Excel version, 3-PG~mix~ was developed in an attempt to model mixed stands. More on this implementation can be found [here](https://sites.google.com/site/davidforresterssite/home/projects/3PGmix).
 
+::: callout-tip
+The 3-PG Excel version has *excellent* documentation - it is a great way to start exploring the power of 3-PG and playing around with different parameters! 
+:::
+
 ### 🧮 r3PG
 
 The r3PG package is an R package written by Volodymyr Trotsiuk, Florian Hartig, and David I. Forrester. The package is available on GitHub [here](https://github.com/trotsiuk/r3PG), with a accompanying documentation [here](https://trotsiuk.github.io/r3PG/). The package is described in detail [here](https://doi.org/10.1111/2041-210X.13474)[^1]. This package is particularly useful for investigating different site parameters and species due to the ease of visualizing output variables, however it is limited over large areas.

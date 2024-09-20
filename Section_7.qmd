@@ -116,6 +116,8 @@ A generic species template for pine is provided below (Species_Generic_Pine.txt)
 "Constant in the stem height relationship",        0
 "Power of DBH in the stem height relationship",        0
 "Power of stocking in the stem height relationship",        0
+"fCalpha700",      1.4
+"fCg700",    0.7
 ```
 
 An example of the command line prompt necessary to run this example, if the executable and the paths are stored on your D drive in a folder called '3PG_Example':

@@ -2,7 +2,7 @@
 title: "3-PG Background"
 ---
 
-###  What is 3-PG?
+### What is 3-PG?
 
 3-PG (Physiological Principles Predicting Growth) is a process-based model designed to simulate forest growth and productivity. It was developed by Landsberg and Waring in 1997[^1], and then modified and used in a spatial version by Coops et al., 1998[^2]. The model represents a significant advancement in forest modeling by bridging the gap between conventional empirical models and complex process-based models. 3-PG is a generic stand model that runs on a monthly time step using climate data, and can be parameterized for individual species. 3-PG consists of five submodules: assimilation of carbohydrates, the distribution of biomass between foliage, roots and stems, the determination of stem number, soil water balance, and conversion of biomass into variables of interest to forest managers.
 

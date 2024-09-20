@@ -114,6 +114,8 @@ Parameters characterizing the species of interest is required for 3-PG. These pa
 "Slope of net v. solar radiation relationship"        
 "Molecular weight of dry matter"        
 "Conversion of solar radiation to PAR" 
+"Value of modifier of quantum efficiency at 700 ppm (fCalpha700)"
+"Value of modifier of canopy conductance 700 ppm (fCg700)"
 ```
 
 More on species parameters can be found in the [Species Paramerizations section](./Section_6.qmd).
