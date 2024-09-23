@@ -298,11 +298,12 @@ Important
 <p><strong>Management Tables</strong></p>
 <p>3-PG can make use of “management tables”. These tables allow arbitrary changes to be made to some of the model variables at particular points in time, simulating the effect of management actions. Three management tables are recognised, allowing control of model variables representing fertility (FR), irrigation (Irrig) and minimum available soil water (MinASW).</p>
 <p>Management tables in the C++ version of 3-PG are completely analagous to those in the Excel version, with the one difference that the C++ version requires management tables to be listed in calendar years (the Excel version requires tables listed by stand age).</p>
-<p>Management tables are indicated in the parameter file by one of the three keyword phrases: “Management: fertility”, “Management: Irrigation”, or “Management: MinASW”. The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:</p>
+<p>Management tables are indicated in the parameter file by one of the three keyword phrases: “Management: fertility”, “Management: Irrigation”, or “Management: MinASW”. The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. A blank line (return) is required after the management action. For example:</p>
 <pre class="custom-block" style="background-color: #f0f0f0; color: black;"><code>  "Management: irrigation",
     1994  8
     1997  irr1997.tif
-    2000  0</code></pre>
+    2000  0
+    </code></pre>
 <p>In the example above, if we assume that the “year planted” parameter has the value 1989, then for every year up to, but not including, 1994, 8 ML/year of irrigation is applied, over the whole run area. For the years 1994, 1995 and 1996, each cell will receive the irrigation specified in the grid file irr1997.tif. If a cell contains the NODATA value, the effect of the previous entry in the management table persists. For the years 1998 and on, zero irrigation is applied throughout the whole run area. This carry over of the last entry of the management table duplicates the working of the Excel version.</p>
 <p>The irrigation management variable can only be provided with a management table. MinASW and fertility, however, can be provided both as management tables and as ordinary parameters. In this case the ordinary parameter value will take effect only where the management table does not provide a value, such as a cell which has the value NODATA in every entry in the management table.</p>
 <p><strong>Other Requirements</strong></p>

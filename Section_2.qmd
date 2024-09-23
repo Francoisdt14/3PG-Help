@@ -9,12 +9,14 @@ title: "Input Datasets"
 The following climate data is required for 3-PG to run:
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
-Monthly means of maximum daily temperature (ºC)
-Monthly means of minimum daily temperature (ºC)
-Monthly mean rainfall (mm month-1)
-Monthly mean short-wave radiation (MJ m-2 d-1)
-Frost days per month
+Monthly means of maximum daily temperature (Tmax, ºC)
+Monthly means of minimum daily temperature (Tmin, ºC)
+Monthly mean rainfall (Rain, mm month-1)
+Monthly mean short-wave radiation (Solar radtn, MJ m-2 d-1)
+Frost days per month (Frost)
 ```
+
+Additionally, monthly mean vapour pressure deficit (VPD), and monthly means of average daily temperature (Tavg, ºC) can be used if available, but they are not required inputs.
 
 Climate data can be found from a variety of sources. In North America, [ClimateNA](https://climatena.ca/) is commonly used. ClimateNA is a free software package that generates scale-free climate data, and can use a digital elevation model (DEM) to produce gridded data at any spatial resolution. Both past and future climate projections can be generated; you can read more about the methodology to derive these estimates [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)[^1] and [here](https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7566)[^2]. You can also use real data to simulate growth - see [The C++ Executable](./Section_3.qmd) for more information.
 
@@ -34,7 +36,7 @@ Soil fertility rating (0-1)
 CO2 (ppm)
 ```
 
-Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. A CO2 factor has been added to this version of 3-PG to improve modelling of future climate scenarios.
+Depending on where your simulations occur, these layers may be freely available. If not, some researchers use default values, while others derive these variables from auxiliary data such as a DEM for available soil water, or soil carbon estimates for soil fertility. A CO2 factor has been added to this version of 3-PG to improve modelling of future climate scenarios. Currently the CO2 is static, but a ramped version is part of the next 3-PG release.
 
 In addition to the physical site conditions, the initial conditions for a stand need to be defined. This includes information about the stem, root, and foliage biomass (t ha^-1^), initial stocking (trees ha^-1^), and soil water (mm) at the start of the simulation. The full list of site conditions are found below:
 

@@ -110,13 +110,14 @@ Make sure to check the formatting of your parameter files! While key words are n
 
 Management tables in the C++ version of 3-PG are completely analagous to those in the Excel version, with the one difference that the C++ version requires management tables to be listed in calendar years (the Excel version requires tables listed by stand age).
 
-Management tables are indicated in the parameter file by one of the three keyword phrases: "Management: fertility", "Management: Irrigation", or "Management: MinASW". The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. For example:
+Management tables are indicated in the parameter file by one of the three keyword phrases: "Management: fertility", "Management: Irrigation", or "Management: MinASW". The keyphrase must appear on a line on its own, followed on subsequent lines by the calendar year, and the value of the management variable. Each value can be either a grid file or a constant. A blank line (return) is required after the management action. For example:
 
 ``` {.custom-block style="background-color: #f0f0f0; color: black;"}
   "Management: irrigation",
     1994  8
     1997  irr1997.tif
     2000  0
+    
 ```
 
 In the example above, if we assume that the "year planted" parameter has the value 1989, then for every year up to, but not including, 1994, 8 ML/year of irrigation is applied, over the whole run area. For the years 1994, 1995 and 1996, each cell will receive the irrigation specified in the grid file irr1997.tif. If a cell contains the NODATA value, the effect of the previous entry in the management table persists. For the years 1998 and on, zero irrigation is applied throughout the whole run area. This carry over of the last entry of the management table duplicates the working of the Excel version.
