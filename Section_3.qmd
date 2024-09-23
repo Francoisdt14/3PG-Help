@@ -4,9 +4,9 @@ title: "The C++ Executable"
 
 Step-by-step user guide for forest simulation with the C++ executable.
 
-### 💻 System requirements?
+### 💻 System requirements
 
-The 3-PG executable can be run on Windows (**still need to test Mac and/or Linux**). The main limitation of 3-PG is the size of the input files - minimum system requirements can be highlighted here, or we can send readers to [Technical Details](./Section_8.qmd).
+The 3-PG executable can be run on Windows (it has been tested on Windows 10 and 11). The 3-PG executable itself is lightweight, with the main limitation being the the size of the input files. For more information, see [Technical Details](./Section_8.qmd).
 
 ### ⚙️ Installation process
 

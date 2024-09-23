@@ -2,12 +2,8 @@
 title: "Technical Details"
 ---
 
-### 💻 GitHub
+### 💻 GitHub and Additional Technical Information ⚙️
 
-Underlying code for the executable can be found at this github repository: **CURRENTLY PRIVATE**
+Underlying code for the executable can be found at this [GitHub](https://github.com/IRSS-UBC/3pg) repository. The repository is currently **private** as we make final changes to the package.
 
-### ⚙️ Additional Technical Information
-
-Anything else to add by Vaughan and Joe etc.
-
-This website and repository is currently hosted at: <https://github.com/Francoisdt14/3PG-Help>. This repository and supporting documentation can be cloned and modified to fit bp's needs.
+This website and repository is currently hosted at: <https://github.com/Francoisdt14/3PG-Help>. The repository and supporting documentation can be cloned and modified to fit bps needs.

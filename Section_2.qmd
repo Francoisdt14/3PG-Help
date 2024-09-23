@@ -16,7 +16,7 @@ Monthly mean short-wave radiation (MJ m-2 d-1)
 Frost days per month
 ```
 
-Climate data can be found from a variety of sources. In North America, [ClimateNA](https://climatena.ca/) is commonly used. ClimateNA is a free software package that generates scale-free climate data, and can use a digital elevation model (DEM) to produce gridded data at any spatial resolution. Both past and future climate projections can be generated; you can read more about the methodology to derive these estimates [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)[^1] and [here](https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7566)[^2].
+Climate data can be found from a variety of sources. In North America, [ClimateNA](https://climatena.ca/) is commonly used. ClimateNA is a free software package that generates scale-free climate data, and can use a digital elevation model (DEM) to produce gridded data at any spatial resolution. Both past and future climate projections can be generated; you can read more about the methodology to derive these estimates [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)[^1] and [here](https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.7566)[^2]. You can also use real data to simulate growth - see [The C++ Executable](./Section_3.qmd) for more information.
 
 [^1]: Wang T, Hamann A, Spittlehouse D, Carroll C (2016) [Locally Downscaled and Spatially Customizable Climate Data for Historical and Future Periods for North Americ](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0156720)a. PLoS ONE 11(6): e0156720. doi:10.1371/journal.pone.0156720
 
